@@ -1,0 +1,65 @@
+.login-form {
+  margin: 5px 0 25px 0;
+
+  .title-b {
+    margin-bottom: 20px;
+
+    .title {
+      font-size: $fs-24;
+      color: var(--primary-color);
+      font-weight: $fw-700;
+      font-family: "Helvetica-Bold";
+    }
+
+    p {
+      font-size: $fs-14;
+      color: var(--text-color);
+      line-height: 1.45;
+    }
+  }
+
+  input {
+    transition: unset !important;
+    border: 1px solid transparent !important;
+
+    &:focus {
+      border: 1px solid var(--primary-color) !important;
+      box-shadow: none !important;
+    }
+  }
+
+  @include media-max(md) {
+    margin: 20px 0 15px 0;
+
+    .title-b {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.b-link {
+  font-size: $fs-14;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: $fw-600;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.reset_expire {
+  h5 {
+    color: var(--text-color);
+  }
+
+  color: var(--text-color);
+}
+
+.login-btn {
+  width: 100%;
+  border-radius: 5px;
+  margin: 7px 0;
+  font-family: "Helvetica-Bold";
+  letter-spacing: 0.5px;
+}

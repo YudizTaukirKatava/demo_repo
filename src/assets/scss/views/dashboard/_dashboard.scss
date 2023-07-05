@@ -1,0 +1,14 @@
+.card-box{
+    &:nth-child(1) .card-body svg{
+        background: linear-gradient(310deg, rgb(17, 113, 239), rgb(17, 205, 239));
+    }
+    &:nth-child(2) .card-body svg{
+        background: linear-gradient(310deg, rgb(245, 54, 92), rgb(245, 96, 54));
+    }
+    &:nth-child(3) .card-body svg{
+        background: linear-gradient(310deg, rgb(45, 206, 137), rgb(45, 206, 204));
+    }
+    &:nth-child(4) .card-body svg{
+        background: linear-gradient(310deg, rgb(251, 99, 64), rgb(251, 177, 64));
+    }
+}
