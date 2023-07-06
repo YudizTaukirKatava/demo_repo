@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Clone or update the repository
+git clone <repository_url> /path/to/remote/server/demo
+
+# Compare with another directory (assuming it already exists)
+cd /path/to/another/directory
+
+# Remove directories that exist on the remote server but are absent in the repository
+for dir in /path/to/remote/server/demo/*; do
+    if [[ -d "$dir" && ! -d "/path/to/another/directory/$(basename $dir)" ]]; then
+        # Directory exists on the remote server but is absent in the repository, delete it
+        rm -rf "$dir"
+    fi
+done
+
+# Compare files and delete files that are not the same (excluding the 'build' directory)
+for file in /path/to/remote/server/demo/*; do
+    if [[ ! -f "$file" || ! -z $(diff -q "$file" "/path/to/another/directory/$(basename $file)" | grep -v "build/") ]]; then
+        # File doesn't exist or is different, delete it
+        rm -rf "$file"
+    fi
+done
+
+# Remove the 'demo' directory
+rm -rf /path/to/remote/server/demo
