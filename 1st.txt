@@ -23,4 +23,5 @@ for file in /path/to/remote/server/demo/*; do
 done
 
 # Remove the 'demo' directoryyyyyyyyy
+# Remove the 'demo' directoryyyyyyyyy
 rm -rf /path/to/remote/server/demo
