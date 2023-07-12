@@ -1,0 +1,33 @@
+.top-bar {
+  position: relative;
+  top: -60px;
+  // margin-bottom: 15px;
+
+  @include media-max(md) {
+    top: 0;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    margin-left: 10px;
+
+    .btn {
+      border-radius: 5px;
+      border: 1px solid transparent;
+      padding: 8px 12px;
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+      background-color: var(--white-color);
+      
+      &:hover {
+        background-color: transparent;
+        color: var(--white-color) !important;
+        border-color: var(--white-color) !important;
+      }
+    }
+
+    .btn+.btn {
+      margin-left: 15px;
+    }
+  }
+}

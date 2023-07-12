@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Helvetica-Regular';
+  src: url('../../fonts/HelveticaCE.eot');
+  src: url('../../fonts/HelveticaCE.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/HelveticaCE.woff2') format('woff2'),
+      url('../../fonts/HelveticaCE.woff') format('woff'),
+      url('../../fonts/HelveticaCE.ttf') format('truetype'),
+      url('../../fonts/HelveticaCE.svg#HelveticaCE') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica-Narrow';
+  src: url('../../fonts/HelveticaCE-Narrow.eot');
+  src: url('../../fonts/HelveticaCE-Narrow.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/HelveticaCE-Narrow.woff2') format('woff2'),
+      url('../../fonts/HelveticaCE-Narrow.woff') format('woff'),
+      url('../../fonts/HelveticaCE-Narrow.ttf') format('truetype'),
+      url('../../fonts/HelveticaCE-Narrow.svg#HelveticaCE-Narrow') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica-Light';
+  src: url('../../fonts/Helvetica-Condensed-Light.eot');
+  src: url('../../fonts/Helvetica-Condensed-Light.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/Helvetica-Condensed-Light.woff2') format('woff2'),
+      url('../../fonts/Helvetica-Condensed-Light.woff') format('woff'),
+      url('../../fonts/Helvetica-Condensed-Light.ttf') format('truetype'),
+      url('../../fonts/Helvetica-Condensed-Light.svg#Helvetica-Condensed-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('../../fonts/HelveticaCE-Bold.eot');
+  src: url('../../fonts/HelveticaCE-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/HelveticaCE-Bold.woff2') format('woff2'),
+      url('../../fonts/HelveticaCE-Bold.woff') format('woff'),
+      url('../../fonts/HelveticaCE-Bold.ttf') format('truetype'),
+      url('../../fonts/HelveticaCE-Bold.svg#HelveticaCE-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
