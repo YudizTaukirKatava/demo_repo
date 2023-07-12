@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- xhtml/index.html08:17:22 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home | NFT Talent</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/img/favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="/admin/assets/vendor/chartist/css/chartist.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" /> -->
+
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="/admin/css/admin-style.css" rel="stylesheet" />
+    <link href="/assets/css/app.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+        <!-- Include Header -->
+        <%- include('header'); -%>
+
+            <!-- Include Sidebar -->
+            <%- include('sidebar'); -%>
+
+                <!--**********************************
+            Content body start
+        ***********************************-->
+                <div class="content-body">
+                    <div class="explore-artwork">
+                        <div class="container-fluid">
+                            <div class="explore-artwork-inr">
+                                <div class="heading-otr">
+                                    <div class="head-otr">
+                                        <h3 class="heading heading-h3">Explore Artworks</h3>
+                                    </div>
+                                </div>
+                                <div class="teb-main">
+                                    <div class="tab-otr">
+                                        <div class="tab-inr">
+                                            <ul class="tabs">
+                                                <li class="tab-link tab-1 active loaded" id="onSaleTab" filter="onSale"
+                                                    data-tab="1" data-value="tabn1">
+                                                    <p class="tab-p body-sb">
+                                                        On Sale (<span id="OnSale"></span>)
+                                                    </p>
+                                                </li>
+                                                <li class="tab-link tab-2" id="ownedTab" filter="owned" data-tab="2"
+                                                    data-value="tabn2">
+                                                    <p class="tab-p body-sb">
+                                                        Owned (<span id="Owned"></span>)
+                                                    </p>
+                                                </li>
+                                                <li class="tab-link tab-3" id="createdTab" filter="created" data-tab="3"
+                                                    data-value="tabn3">
+                                                    <p class="tab-p body-sb">
+                                                        Created (<span id="Created"></span>)
+                                                    </p>
+                                                </li>
+                                                <li class="tab-link tab-4" data-tab="4" id="bidActivityTab" filter=""
+                                                    data-value="tabn4">
+                                                    <p class="tab-p body-sb">Bid Activity</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="line"></span>
+                                <div class="row row-custom-main">
+                                    <div id="tab-1" class="tab-content active col">
+                                        <div class="row row-custom-inr" id="tabn1">
+                                        </div>
+                                        <a id="load-more-onSale" href="javascript:void(0)"
+                                            class="btn-outline2 btn-wallet load-more-collections" tabindex="0"
+                                            data-value="tabn1" filter="onSale">Load More
+                                            Artworks</a>
+                                    </div>
+                                    <div id="tab-2" class="tab-content col">
+                                        <div class="row row-custom-inr" id="tabn2">
+                                        </div>
+                                        <a id="load-more-owned" href="javascript:void(0)"
+                                            class="btn-outline2 btn-wallet load-more-collections" tabindex="0"
+                                            data-value="tabn2" filter="owned">Load More
+                                            Artworks</a>
+                                    </div>
+                                    <div id="tab-3" class="tab-content col">
+                                        <div class="row row-custom-inr" id="tabn3">
+                                        </div>
+                                        <a id="load-more-created" href="javascript:void(0)"
+                                            class="btn-outline2 btn-wallet load-more-collections" tabindex="0"
+                                            data-value="tabn3" filter="created">Load More
+                                            Artworks</a>
+                                    </div>
+                                    <div id="tab-4" class="tab-content col">
+                                        <div class="row row-cusotm activites-main-row" id="tabn4">
+                                            <div class="col-lg-6 col-left-otr">
+                                                <div class="activity-details user-profile-page">
+                                                    <h4 class="heading-h4 activity-head">
+                                                        Received Bids
+                                                    </h4>
+                                                    <div class="place-bid-main-group" id="receivedBid">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--**********************************
+            Content body end
+        ***********************************-->
+
+                <!--**********************************
+            Footer start
+        ***********************************-->
+
+                <%- include('footer'); -%>
+
+                    <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+
+    <script src="/admin/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/deznav-init.js"></script>
+    <script src="/admin/assets/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="/admin/assets/vendor/peity/jquery.peity.min.js"></script>
+
+
+    <!-- <script src="/assets/js/app.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <!-- ejs -->
+    <script src="/assets/js/ejs.min.js"></script>
+    <script src="/user/cards/card.templates.js"></script>
+
+    <script src="/admin/js/explore-artworks.js"></script>
+</body>
+
+<!-- xhtml/index.html08:18:50 -->
+
+</html>

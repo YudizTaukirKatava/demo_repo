@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Us | NFT Talent</title>
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+
+    <!--=======================================
+            Modal Start Here
+    ========================================-->
+
+    <%- include('sidebar.ejs') %>
+
+        <!--=======================================
+                Modal End Here
+    ========================================-->
+
+        <!--=======================================
+                Navbar Start Here
+    ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <%- include('navbar.ejs') %>
+            </div>
+        </div>
+
+        <!--=======================================
+                Navbar End Here
+    ========================================-->
+
+        <!-- TODO: Body goes here -->
+
+
+        <div class="contact-us-otr">
+
+
+            <div class="contact-wrapper mt-5 mb-6">
+                <div id="raise-ticket-modal" class="raise-ticket-modal">
+                    <div class="_main">
+                        <div class="_container">
+                            <div class="_title">
+                                <h3>Contact Us</h3>
+                            </div>
+                            <span class="line"></span>
+                            <hr />
+                            <div class="_content">
+                                <div class="raise-ticket-otr row justify-content-center">
+                                    <label class="col-3"><span>Name</span><span>:</span></label>
+                                    <label class="col-5 cntr" value=""><input type="text" id="contactus-name"></label>
+                                </div>
+
+                                <div class="raise-ticket-otr row justify-content-center">
+                                    <label class="col-3"><span>Email</span><span>:</span></label>
+                                    <label class="col-5 cntr" value=""><input type="text" id="contactus-mail"></label>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <label for="" class="col-3"><span>Description</span><span>:</span></label>
+                                    <div class="col-5 cntr ">
+                                        <textarea name="" id="contactus-desc" class="input ticket-desc"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr />
+                            <div class="_footer">
+                                <button id="contactus-btn" class="place-bid-final">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =======================================
+            Footer & Copyright Section Start Here
+        ========================================-->
+
+        <%- include('footer.ejs') %>
+            <script src="../user/js/contactUs.js"></script>
+
+            <!--=======================================
+            Footer & Copyright Section End Here
+        ========================================-->
+</body>
+
+</html>

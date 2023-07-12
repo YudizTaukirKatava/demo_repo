@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Activities | NFT Talent</title>
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+
+    <!--=======================================
+            Modal Start Here
+    ========================================-->
+
+    <%- include('sidebar.ejs') %>
+
+        <!--=======================================
+                Modal End Here
+    ========================================-->
+
+        <!--=======================================
+                Navbar Start Here
+    ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr"><%- include('navbar.ejs') %></div>
+        </div>
+
+        <!--=======================================
+                Navbar End Here
+    ========================================-->
+
+        <!-- TODO: Body goes here -->
+
+        <div class="live-acution-home2">
+            <div class="container-fluid">
+                <div class="live-auction-inr">
+                    <div class="heading-otr" style="margin-top: 15px;">
+                        <div class="head-otr">
+                            <h3 class="heading heading-h3">Activity</h3>
+                        </div>
+                    </div>
+                    <!-- <span class="line"></span> -->
+                    <div class="row row-cusotm activites-main-row activity-page-main">
+                        <div class="col-lg-6 col-left-otr ">
+                            <div class="activity-details">
+
+                                <div class="place-bid-main-group activity-group" id="activity-tab">
+                                    <!-- all activities here -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-right-otr activity-filters-otr">
+                            <div class="heading-otr">
+                                <div class="head-otr">
+                                    <h4 class=" heading-h4">Apply Filter</h4>
+                                </div>
+                                <a href="javascript:void(0)" class="clear-filter">Clear Filter</a>
+                            </div>
+                            <span class="line"></span>
+                            <ul class="activity-selection-tabs">
+                                <li val="On Sale">Sales</li>
+                                <li val="On Auction">Live Auction</li>
+                                <li val="Sold">Transfer</li>
+                                <li val="Bid">Bids</li>
+                                <li val="Mint">Mint</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- =======================================
+            Footer & Copyright Section Start Here
+        ========================================-->
+
+        <%- include('footer.ejs') %>
+
+            <script src="/user/js/activity.js"></script>
+
+            <!--=======================================
+            Footer & Copyright Section End Here
+        ========================================-->
+</body>
+
+</html>

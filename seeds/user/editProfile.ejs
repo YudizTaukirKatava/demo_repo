@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit Profile | NFT Talent</title>
+    <%- include('css-lib') %>
+</head>
+
+<body>
+    <%- include('sidebar.ejs') %>
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <%- include('navbar.ejs') %>
+            </div>
+        </div>
+
+        <div class="signup-main edit-profile-main">
+            <div class="container-fluid">
+                <div class="sign-up">
+
+                    <div class="row row-login">
+                        <div class="col-lg-8 col-login-otr">
+                            <div class="col-login-inr">
+                                <div class="content">
+                                    <h3 class="head heading-h3">Edit Profile</h3>
+                                    <div class="login-social">
+                                        <span class="line"></span>
+
+                                        <span class="line"></span>
+                                    </div>
+
+
+                                    <div class="avatar-upload">
+                                        <div class="profile-background">
+                                            <div class="avatar-edit profile-bg">
+                                                <input type='file' id="imageUpload-bg" accept=".png, .jpg, .jpeg" />
+                                                <label for="imageUpload-bg"></label>
+                                            </div>
+                                            <div class="bg-preview">
+                                                <div id="imagePreview-bg"
+                                                    style="background-image: url('/assets/img/profile-background.png');">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="avatar-edit">
+                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload"></label>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview"
+                                                style="background-image: url('/assets/img/male-avatar-maker.jpg');">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <form class="form-main">
+                                        <div class="input-otr">
+                                            <textarea class="input" placeholder="About Me" id="bio"></textarea>
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-solid fa-user"></i></div>
+                                            <input class="input" type="" name="" placeholder="First name" id="fname">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-solid fa-user"></i></div>
+                                            <input class="input" type="" name="" placeholder="Last name" id="lname">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-solid fa-user"></i></div>
+                                            <input class="input" type="" name="" placeholder="Username" id="uname">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-solid fa-user"></i></div>
+                                            <input class="input" type="" name="" placeholder="User Email" id="email">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-solid fa-user"></i></div>
+                                            <input class="input " type="" name="" placeholder="Personal link"
+                                                id="website-link">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-brands fa-facebook"></i></div>
+                                            <input class="input " type="" name="" placeholder="Facebook link"
+                                                id="facebook">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-brands fa-twitter"></i></div>
+                                            <input class="input " type="" name="" placeholder="Twitter link"
+                                                id="twitter">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-brands fa-discord"></i></div>
+                                            <input class="input " type="" name="" placeholder="Discord link"
+                                                id="discord">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-brands fa-pinterest"></i></div>
+                                            <input class="input " type="" name="" placeholder="Pinterest link"
+                                                id="pinterest">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-brands fa-youtube"></i></div>
+                                            <input class="input " type="" name="" placeholder="YouTube link"
+                                                id="youtube">
+                                        </div>
+                                        <div class="input-otr">
+                                            <div class="placeholder-icn"><i class="fa-brands fa-telegram"></i></div>
+                                            <input class="input " type="" name="" placeholder="Telegram link"
+                                                id="telegram">
+                                        </div>
+
+                                        <div class="two-fa-otr">
+                                            <p class="heading-h5">2FA (Recommended)</p>
+                                            <div class="check-box">
+                                                <input type="checkbox" class="2fa-btn" id="2fa-btn">
+                                            </div>
+                                        </div>
+
+                                        <div class="login-social">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </div>
+                                        <div class="action-otr">
+                                            <button class="button body-sb" id="submit-btn" type="submit">Submit</input>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--=======================================
+                    Warning modal start
+        ========================================-->
+
+        <div id="warning-friend-modal" class="refer-friend-modal modal">
+            <div class="_main">
+                <a href="" class="close-icn">
+                    <img id="icn-warning-close" class="close-icn" src="/assets/img/cancel.svg" alt="close">
+                </a>
+                <div class="_container">
+                    <div class="_title">
+                        <h3>Warning!</h3>
+                    </div>
+                    <hr />
+                    <div class="_content">
+
+
+                        <div class="refer-friend-otr row justify-content-center">
+                            <div class="col-6">
+                                <div class="refer-img">
+                                    <img src="/assets/img/warning-img.png" alt="warning">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row justify-content-center refer-code-otr">
+                            <label for="" class="col-6" style="justify-content: center;">You'll be logged out to verify
+                                your new email</label>
+                        </div>
+
+                    </div>
+                    <hr />
+                    <div class="_footer">
+                        <button class="place-bid-final close" id="btn-warning-ok">
+                            OK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=======================================
+                    Warning modal end
+        ========================================-->
+        <!--=======================================
+           OTP verification modal start here
+        ========================================-->
+        <div id="otp-modal-edit-profile" class="otp-modal modal">
+            <div class="_main">
+                <a href="" class="close-icn">
+                    <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+                </a>
+                <div class="_container">
+                    <div class="_title">
+                        <h3>OTP Verification</h3>
+                        <p>Place enter OTP received in the Email id</p>
+                    </div>
+
+                    <div class="_content">
+                        <div class="row d-flex justify-content-center">
+                            <div class="otpbox-container col-6">
+                                <input type="number" name="digits" maxlength="1" id="char1-edit-profile">
+                                <input type="number" name="digits" maxlength="1" id="char2-edit-profile">
+                                <input type="number" name="digits" maxlength="1" id="char3-edit-profile">
+                                <input type="number" name="digits" maxlength="1" id="char4-edit-profile">
+                                <p class="error-text half-width">Please enter valid OTP.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="_footer">
+                        <a id="verify-otp-edit-profile"><button type="button" class="place-bid-final">Verify
+                                OTP</button></a>
+                        <p>Did not received the code? <a href="javascript:void(0)"
+                                id="resendMail-edit-profile"><span>Resend in <span id="mailTimer-edit-profile">
+                                    </span></span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=======================================
+        OTP Verification modal ends here
+        ========================================-->
+
+        <%- include('footer.ejs') %>
+
+            <script>
+                function readURL(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                            $('#imagePreview').hide();
+
+                            $('#imagePreview').fadeIn(650);
+
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+                $("#imageUpload").change(function () {
+                    readURL(this);
+                });
+
+                function readURL_cover(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $('#imagePreview-bg').css('background-image', 'url(' + e.target.result + ')');
+                            $('#imagePreview-bg').hide();
+
+                            $('#imagePreview-bg').fadeIn(650);
+
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+                $("#imageUpload-bg").change(function () {
+                    readURL_cover(this);
+                });
+
+
+
+
+            </script>
+            <script src="../user/js/edit-profile.js"></script>
+
+
+</body>
+
+</html>

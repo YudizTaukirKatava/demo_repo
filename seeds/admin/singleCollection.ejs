@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- xhtml/index.html08:17:22 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin | Single Collection</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/img/favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="/admin/assets/vendor/chartist/css/chartist.min.css" />
+
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="/admin/css/admin-style.css" rel="stylesheet" />
+    <link href="/assets/css/app.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+        <!-- Include Header -->
+        <%- include('header'); -%>
+
+            <!-- Include Sidebar -->
+            <%- include('sidebar'); -%>
+
+                <!--**********************************
+                        Content body start
+                ***********************************-->
+                <div class="content-body">
+                    <div class="single-collection-main">
+                        <div class="container-fluid">
+                            <div class="single-collection-otr">
+                                <div class="single-collection-showcase">
+                                    <div class="single-collection-img">
+                                        <img id="collection-img" src="/assets/img/logo-N.png"
+                                            onerror="this.onerror=null;this.src='/assets/img/logo-N.png';"
+                                            alt="collection">
+                                    </div>
+                                    <div class="single-collection-name">
+                                        <h1 class="heading-h4" id="collection-name"></h1>
+                                    </div>
+                                    <div class="single-collection-desc">
+                                        <p id="collection-desc"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-acution-home2 single-collection-page">
+                            <div class="container-fluid">
+                                <div class="live-auction-inr">
+
+                                    <div class="row row-custom" id="collection-nft-card">
+                                    </div>
+                                    <a id="load-btn" href="" class="btn-outline2 btn-wallet load-more-collections"
+                                        tabindex="0">Load
+                                        More
+                                        Collections</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--**********************************
+            Content body end
+        ***********************************-->
+
+                <!--**********************************
+            Footer start
+        ***********************************-->
+
+                <%- include('footer'); -%>
+
+                    <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+
+    <script src="/admin/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/deznav-init.js"></script>
+    <script src="/admin/assets/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="/admin/assets/vendor/peity/jquery.peity.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+    <!-- ejs -->
+    <script src="/assets/js/ejs.min.js"></script>
+    <script src="/user/cards/card.templates.js"></script>
+
+    <script src="/admin/js/singleCollection.js"></script>
+</body>
+
+<!-- xhtml/index.html08:18:50 -->
+
+</html>

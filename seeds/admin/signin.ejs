@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Signin | NFT Talent</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/img/favicon/favicon.ico" />
+
+    <link href="/admin/css/admin-style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/libs/notyf/css/notyf.min.css" />
+
+    <script>
+        const ___ENV___ = '<%= NODE_ENV %>';
+        console.log(___ENV___);
+    </script>
+</head>
+
+<body class="h-100">
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+                                    <div class="text-center mb-3">
+                                        <img src="/assets/img/logo.svg" alt="logo" width="200">
+                                    </div>
+                                    <h4 class="text-center mb-4">
+                                        Sign in your account
+                                    </h4>
+                                    <div class="basic-form">
+                                        <form class="form-valide-with-icon">
+                                            <div class="form-group">
+                                                <label class="text-label">Email</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fa fa-user"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="email" name="email"
+                                                        placeholder="Email" />
+                                                    <div id="email-error" class="invalid-feedback animated fadeInUp">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-label">Password</label>
+                                                <div class="input-group transparent-append">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fa fa-lock"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="password"
+                                                        name="password" placeholder="Password" />
+                                                    <div id="password-error" class="invalid-feedback animated fadeInUp">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                                                <div class="form-group"></div>
+                                                <div class="form-group">
+                                                    <a href="/a/forgotPassword">Forgot Password?</a>
+                                                </div>
+                                            </div>
+                                            <div class="text-center mt-4">
+                                                <button type="button" id="signin" class="btn btn-primary btn-block">
+                                                    Sign Me In
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--=======================================
+   OTP ADMIN modal start here
+========================================-->
+
+    <!-- NOTE: find OTP input logic and close button click function at the end of the html -->
+    <div id="admin-otp-modal" class="otp-modal admin-otp modal">
+        <div class="_main">
+            <a href="" class="close-icn">
+                <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+            </a>
+            <div class="_container">
+                <div class="_title">
+                    <h3>OTP Verification</h3>
+                    <p>Place enter OTP received in the Email id</p>
+                </div>
+
+                <div class="_content">
+                    <div class="row d-flex justify-content-center">
+                        <div class="otpbox-container col-6">
+                            <input type="text" maxlength="1" name="digits" id="char1">
+                            <input type="text" maxlength="1" name="digits" id="char2">
+                            <input type="text" maxlength="1" name="digits" id="char3">
+                            <input type="text" maxlength="1" name="digits" id="char4">
+                            <p class="error-text half-width">Please enter valid OTP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="_footer">
+                    <button id="submitAdminOtp" type="button" class="place-bid-final">Verify OTP</button>
+                    <p>Did not received the code? <span>Resend in 30 Seconds</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=======================================
+OTP ADMIN modal ends here
+========================================-->
+
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="/admin/assets/vendor/global/global.min.js"></script>
+    <script src="/admin/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- Toastr -->
+
+    <script src="/assets/libs/notyf/js/notyf.min.js"></script>
+
+    <!-- wallet connect cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+
+    <script src="/assets/js/web3.min.js"></script>
+
+    <!-- platform config  -->
+    <script src="/assets/js/config.platform.js"></script>
+
+    <!-- helper Functions  -->
+    <script src="/assets/js/helper.js"></script>
+
+    <!-- Validator Functions  -->
+    <script src="/assets/js/validator.js"></script>
+
+    <!-- global variables  -->
+    <script src="/assets/js/service.web3.js"></script>
+    <script src="/assets/js/global.js"></script>
+
+    <!-- common Functions  -->
+    <script src="/assets/js/common.js"></script>
+
+    <script src="/admin/js/signin.js"></script>
+
+
+
+    <script>
+        // admin otp input logic
+        $(".otpbox-container input").keyup(function (e) {
+
+            if ($(this).val() > 0) {
+                if (e.key == 1 || e.key == 2 || e.key == 3 || e.key == 4 || e.key == 5 || e.key == 6 || e.key == 7 || e.key == 8 || e.key == 9 || e.key == 0) {
+                    $(this).next().focus();
+                }
+            } else {
+                if (e.key == 'Backspace') {
+                    $(this).prev().focus();
+                }
+            }
+
+        });
+
+        // modal close icon click
+        $(".close-icn").on("click", function (e) {
+            e.preventDefault();
+            $(this).parents().find(".modal").hide();
+        })
+
+
+    </script>
+
+</body>
+
+</html>

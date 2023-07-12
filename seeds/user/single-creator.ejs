@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Creator | NFT Talent</title>
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+
+    <!--=======================================
+            Modal Start Here
+    ========================================-->
+
+    <%- include('sidebar.ejs') %>
+
+        <!--=======================================
+                Modal End Here
+    ========================================-->
+
+        <!--=======================================
+                Navbar Start Here
+    ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <%- include('navbar.ejs') %>
+            </div>
+        </div>
+
+        <!--=======================================
+            Navbar End Here
+========================================-->
+        <!--=======================================
+            User profile Start Here
+    ========================================-->
+
+        <div class="user-profile-otr" id="user-profile">
+            <div class="container-fluid">
+                <div class="wrapper">
+                    <div class="user-img">
+                        <div class="creator-img-otr">
+                            <img class="creator-img" src=""
+                                onerror="this.onerror=null;this.src='/assets/img/male-avatar-maker.jpg';"
+                                alt="creator-img" id="user-img" />
+                            <img class="creator-img-temp d-none" src="/assets/img/male-avatar-maker.jpg"
+                                alt="creator-img" id="user-img-temp" />
+                        </div>
+                    </div>
+                    <div class="another-user">
+                        <div class="another-user-top">
+                            <div class="another-user-left">
+                                <div class="user-main">
+                                    <h3 class="user-head heading-h4" id="user-name"></h3>
+                                    <div class="check-otr" id="blue-tick">
+                                        <svg class="check-icon" width="14" height="14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.813 3.938l-6.126 6.124L2.626 7" stroke="#fff" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="address-main" id="copy-address-2" role="button">
+                                    <p class="address body-s" id="user-wallet-address"></p>
+                                    <div class="copy-icon-otr">
+                                        <svg class="copy-icon" width="18" height="18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.636 12.636H15a2 2 0 002-2V3a2 2 0 00-2-2H7.364a2 2 0 00-2 2v2.364"
+                                                stroke="#CFCFCF" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M10.636 5.364H3a2 2 0 00-2 2V15a2 2 0 002 2h7.636a2 2 0 002-2V7.364a2 2 0 00-2-2z"
+                                                stroke="#CFCFCF" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="another-user-right">
+
+                                <div class="follower-main">
+                                    <div class="follow-inr" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <h5 class="num heading-h5" id="user-followers"></h5>
+                                        <p class="body-s follow">Followers</p>
+                                    </div>
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <h4 class="heading heading-h4">
+                                                    Followers
+                                                </h4>
+                                                <div class="following-wrapper" id="followersList"></div>
+                                                <div class="close-icon-otr">
+                                                    <svg class="icon-close" data-bs-dismiss="modal" aria-label="Close"
+                                                        width="18" height="18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 1L1 17M17 17L1 1" stroke="#CFCFCF" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <h4 class="heading heading-h4">
+                                                    Following
+                                                </h4>
+                                                <div class="following-wrapper" id="followingsList"></div>
+                                                <div class="close-icon-otr">
+                                                    <svg class="icon-close" data-bs-dismiss="modal" aria-label="Close"
+                                                        width="18" height="18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 1L1 17M17 17L1 1" stroke="#CFCFCF" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="follow-inr" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                        <h5 class="num heading-h5" id="user-followings"></h5>
+                                        <p class="body-s follow">Following</p>
+                                    </div>
+                                </div>
+                                <div class="action-otr" id="singleCreator">
+                                    <a href="/editProfile" class="btn-fill btn-follow" id="edit-profile">Edit
+                                        Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="another-user-about">
+                            <div class="another-about-left">
+                                <h5 class="about-head heading-h5">About Me</h5>
+                                <p class="body-m about-desc" id="user-bio">
+                                    Egestas purus sit nullam quis. Ornare magna
+                                    rutrum tellus <br />
+                                    porta massa lectus viverra amet velit.
+                                </p>
+                            </div>
+                            <div class="another-about-right">
+                                <div class="profile-links-otr">
+                                    <div class="visto-otr" id="website">
+                                        <div class="link-icon">
+                                            <svg class="link" width="25" height="25" viewBox="0 0 59 60" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M50.0258 10.044C49.9897 10.0075 49.9505 9.97407 49.9088 9.944C47.2266 7.13832 44.0068 4.9015 40.4415 3.36693C36.8762 1.83236 33.0383 1.03146 29.1568 1.012C29.111 1.00245 29.0645 0.995775 29.0178 0.992004C28.9868 0.992004 28.9618 1.007 28.9318 1.009C25.0354 1.01677 21.1808 1.81209 17.5995 3.34719C14.0183 4.88229 10.7843 7.12548 8.09184 9.94201C8.04951 9.97204 8.00971 10.0055 7.97284 10.042C7.96084 10.058 7.95784 10.077 7.94684 10.093C2.8452 15.4672 0.000976562 22.5945 0.000976562 30.0045C0.000976563 37.4145 2.8452 44.5418 7.94684 49.916C7.95484 49.928 7.95684 49.942 7.96484 49.953C7.97284 49.964 8.01384 49.987 8.03584 50.01C10.7366 52.8509 13.9866 55.1133 17.5884 56.6599C21.1902 58.2065 25.0687 59.0049 28.9886 59.0068C32.9084 59.0087 36.7877 58.2139 40.391 56.6708C43.9943 55.1277 47.2464 52.8683 49.9498 50.03C49.9811 50.0066 50.0108 49.9812 50.0388 49.954C50.0478 49.943 50.0488 49.929 50.0568 49.917C55.1591 44.5427 58.0037 37.415 58.0037 30.0045C58.0037 22.594 55.1591 15.4663 50.0568 10.092C50.0398 10.078 50.0378 10.059 50.0258 10.044ZM49.1058 48C46.625 46.1701 43.898 44.6999 41.0058 43.633C42.6625 39.6184 43.5969 35.3427 43.7658 31.003H55.9748C55.7471 37.2984 53.316 43.314 49.1058 48ZM8.89584 48C4.68462 43.3134 2.25313 37.2966 2.02584 31H14.2508C14.4152 35.3414 15.3458 39.6196 16.9998 43.637C14.1085 44.7066 11.3818 46.1774 8.89984 48.006L8.89584 48ZM8.90584 12C11.4254 13.8646 14.2024 15.3534 17.1498 16.42C15.4335 20.408 14.451 24.673 14.2498 29.01H2.02484C2.25285 22.7085 4.68845 16.6877 8.90584 12ZM30.0188 56.364V43.531C32.8177 43.6093 35.5951 44.0462 38.2828 44.831C36.3162 49.183 33.5076 53.1027 30.0188 56.364ZM27.9998 3.756V16.472C25.2411 16.3928 22.5034 15.9654 19.8518 15.2C21.8391 10.9157 24.6016 7.03576 27.9998 3.756ZM19.0198 17.041C21.937 17.9127 24.9563 18.3959 27.9998 18.478V29.008H16.2678C16.4518 24.8851 17.3844 20.8301 19.0198 17.041ZM27.9998 31.008V41.531C24.9204 41.614 21.8655 42.1046 18.9148 42.99C17.3238 39.1858 16.427 35.1274 16.2668 31.007L27.9998 31.008ZM39.0998 42.991C36.1519 42.1043 33.0992 41.6134 30.0218 41.531V31.008H41.7508C41.5887 35.1284 40.6909 39.1867 39.0998 42.991ZM30.0188 29.008V18.478C33.063 18.3935 36.0828 17.9077 38.9998 17.033C40.6352 20.8248 41.5664 24.8826 41.7478 29.008H30.0188ZM30.0188 16.471V3.737C33.4197 7.01947 36.1839 10.9028 38.1718 15.191C35.5187 15.9584 32.7795 16.3885 30.0188 16.471ZM17.9668 14.59C15.2356 13.6143 12.6579 12.2532 10.3118 10.548C14.5196 6.49429 19.932 3.9197 25.7318 3.213C22.5303 6.54836 19.9062 10.3932 17.9668 14.59ZM27.9998 43.531V56.355C24.5078 53.1003 21.6968 49.1846 19.7298 44.835C22.4198 44.0503 25.1989 43.6121 27.9998 43.531ZM40.2108 45.472C42.8791 46.448 45.3994 47.7887 47.6998 49.456C43.5405 53.4677 38.2007 56.0345 32.4698 56.777C35.7027 53.4997 38.3242 49.6712 40.2108 45.472ZM43.7668 29.008C43.5688 24.6679 42.588 20.3993 40.8718 16.408C43.8104 15.3421 46.5796 13.8574 49.0938 12C53.3112 16.6877 55.7468 22.7085 55.9748 29.01L43.7668 29.008ZM47.6868 10.548C45.3472 12.2473 42.7778 13.6052 40.0558 14.581C38.1202 10.3912 35.503 6.55141 32.3108 3.218C38.0945 3.93257 43.49 6.50473 47.6868 10.548ZM10.2998 49.457C12.6047 47.7901 15.1285 46.4491 17.7998 45.472C19.6841 49.6698 22.3018 53.498 25.5298 56.777C19.7991 56.0348 14.4593 53.4683 10.2998 49.457Z"
+                                                    fill="#999999" />
+                                            </svg>
+                                        </div>
+                                        <a href="" target="_blank" class="visto body-mb" id="website-link"></a>
+                                    </div>
+                                    <ul class="icon-ul">
+                                        <li class="icon-li" id="facebook">
+                                            <a href="" target="_blank" class="icon-a" id="fb-link">
+                                                <svg class="icon" width="32" height="32" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#999"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li" id="twitter">
+                                            <a href="" target="_blank" class="icon-a" id="twitter-link">
+                                                <svg class="icon" width="32" height="32" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li" id="discord">
+                                            <a href="" target="_blank" class="icon-a" id="discord-link">
+                                                <svg class="icon" width="32" height="32" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                                                        fill="#999" />
+                                                    <path
+                                                        d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                                                        fill="#999" />
+                                                    <path
+                                                        d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li" id="pinterest">
+                                            <a href="" target="_blank" class="icon-a" id="pinterest-link">
+                                                <svg class="icon" width="32" height="32" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15 11l-4 17M7.693 19.57A10 10 0 1126 14c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li" id="youtube">
+                                            <a href="" target="_blank" class="icon-a" id="youtube-link">
+                                                <svg class="icon" width="32" height="32" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20 16l-6-4v8l6-4z" stroke="#999" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M3 16c0 3.72.384 5.902.676 7.023a1.99 1.99 0 001.204 1.362C9.065 25.993 16 25.95 16 25.95s6.935.044 11.12-1.564a1.99 1.99 0 001.204-1.362C28.616 21.902 29 19.72 29 16c0-3.72-.384-5.902-.676-7.023a1.99 1.99 0 00-1.205-1.362C22.935 6.007 16 6.05 16 6.05S9.065 6.007 4.88 7.615a1.99 1.99 0 00-1.204 1.362C3.384 10.098 3 12.28 3 16z"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li" id="telegram">
+                                            <a href="" target="_blank" class="icon-a" id="telegram-link">
+                                                <svg class="icon" width="32" height="32" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14"
+                                                        stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=======================================
+            User profile End Here
+    ========================================-->
+
+        <!--=======================================
+            Explore Artworks Start Here
+    ========================================-->
+
+        <div class="explore-artwork-creator">
+            <div class="container-fluid">
+                <div class="explore-artwork-inr">
+                    <div class="teb-main">
+                        <div class="tab-otr">
+                            <div class="tab-inr">
+                                <ul class="tabs">
+                                    <li class="tab-link tab-1 active loaded" id="onSaleTab" filter="onSale" data-tab="1"
+                                        data-value="tabn1">
+                                        <p class="tab-p body-sb">
+                                            On Sale (<span id="OnSale"></span>)
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-2" id="ownedTab" filter="owned" data-tab="2"
+                                        data-value="tabn2">
+                                        <p class="tab-p body-sb">
+                                            Owned (<span id="Owned"></span>)
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-3" id="createdTab" filter="created" data-tab="3"
+                                        data-value="tabn3">
+                                        <p class="tab-p body-sb">
+                                            Created (<span id="Created"></span>)
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-4" data-tab="4" id="activityTab" filter=""
+                                        data-value="tabn4">
+                                        <p class="tab-p body-sb">Activity</p>
+                                    </li>
+                                    <li class="tab-link tab-5" data-tab="5" id="bidActivityTab" filter=""
+                                        data-value="tabn5">
+                                        <p class="tab-p body-sb">Bid Activity</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="line"></span>
+                    <div class="row row-custom-main">
+                        <div id="tab-1" class="tab-content active">
+                            <div class="row row-custom-inr" id="tabn1">
+                            </div>
+                            <a id="load-more-onSale" href="javascript:void(0)"
+                                class="btn-outline2 btn-wallet load-more-collections" tabindex="0" data-value="tabn1"
+                                filter="onSale">Load More
+                                Artworks</a>
+                        </div>
+                        <div id="tab-2" class="tab-content">
+                            <div class="row row-custom-inr" id="tabn2">
+                            </div>
+                            <a id="load-more-owned" href="javascript:void(0)"
+                                class="btn-outline2 btn-wallet load-more-collections" tabindex="0" data-value="tabn2"
+                                filter="owned">Load More
+                                Artworks</a>
+                        </div>
+                        <div id="tab-3" class="tab-content">
+                            <div class="row row-custom-inr" id="tabn3">
+                            </div>
+                            <a id="load-more-created" href="javascript:void(0)"
+                                class="btn-outline2 btn-wallet load-more-collections" tabindex="0" data-value="tabn3"
+                                filter="created">Load More
+                                Artworks</a>
+                        </div>
+                        <div id="tab-4" class="tab-content">
+                            <div class="row row-cusotm activites-main-row" id="tabn4">
+                                <div class="col-lg-6 col-left-otr">
+                                    <div class="activity-details user-profile-page">
+                                        <h4 class="heading-h4 activity-head">
+                                            General Activity
+                                        </h4>
+                                        <div class="place-bid-main-group" id="generalActivity">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-left-otr">
+                                    <div class="activity-details user-profile-page">
+                                        <h4 class="heading-h4 activity-head">
+                                            Artwork Activity
+                                        </h4>
+                                        <div class="place-bid-main-group" id="artworkActivity">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-5" class="tab-content">
+                            <div class="row row-cusotm activites-main-row" id="tabn5">
+                                <div class="col-lg-6 col-left-otr">
+                                    <div class="activity-details user-profile-page">
+                                        <h4 class="heading-h4 activity-head">
+                                            Place Bids
+                                        </h4>
+                                        <div class="place-bid-main-group" id="placebid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-left-otr">
+                                    <div class="activity-details user-profile-page">
+                                        <h4 class="heading-h4 activity-head">
+                                            Received Bids
+                                        </h4>
+                                        <div class="place-bid-main-group" id="receivedBid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=======================================
+            Explore Artworks End Here
+    ========================================-->
+
+        <!--=======================================
+            Footer & Copyright Section Start Here
+        ========================================-->
+
+        <%- include('footer.ejs') %>
+            <script src="/assets/libs/color-thief/color-thief.umd.js"></script>
+            <script src="/user/js/single-creator.js"></script>
+
+            <!--=======================================
+            Footer & Copyright Section End Here
+        ========================================-->
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- xhtml/index.html08:17:22 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home | NFT Talent</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/img/favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="/admin/assets/vendor/chartist/css/chartist.min.css" />
+
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="/admin/css/admin-style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+        <!-- Include Header -->
+        <%- include('header'); -%>
+
+            <!-- Include Sidebar -->
+            <%- include('sidebar'); -%>
+
+                <!--**********************************
+            Content body start
+        ***********************************-->
+                <div class="content-body">
+                    <!-- row -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6 col-xxl-6 col-lg-6 col-sm-6">
+                                <div class="card overflow-hidden">
+                                    <div class="card-header border-0 pb-0">
+                                        <div class="mr-auto">
+                                            <h4>Number of NFTs on Sale</h4>
+                                            <h4 id="numberOfNFTsOnSale" class="text-black mb-2 font-w600 fs-20">
+                                                0
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-xxl-6 col-lg-6 col-sm-6">
+                                <div class="card overflow-hidden">
+                                    <div class="card-header border-0 pb-0">
+                                        <div class="mr-auto">
+                                            <h4>Number of NFTs on Auction</h4>
+                                            <h4 id="numberOfNFTsOnAuction" class="text-black mb-2 font-w600 fs-20">
+                                                0
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-xxl-6 col-lg-6 col-sm-6">
+                                <div class="card overflow-hidden">
+                                    <div class="card-header border-0 pb-0">
+                                        <div class="mr-auto">
+                                            <h4>Number of Users</h4>
+                                            <h4 id="numberOfUsers" class="text-black mb-2 font-w600 fs-20">
+                                                0
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-xxl-6 col-lg-6 col-sm-6">
+                                <div class="card overflow-hidden">
+                                    <div class="card-header border-0 pb-0">
+                                        <div class="mr-auto">
+                                            <h4>Number of NFTs Sold</h4>
+                                            <h4 id="numberOfNFTsSold" class="text-black mb-2 font-w600 fs-20">
+                                                0
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-xxl-12 col-lg-12 col-sm-12">
+                                <div class="card">
+                                    <div class="card-header border-0 d-xl-flex d-lg-block d-md-flex d-sm-flex d-block">
+                                        <div class="mr-2">
+                                            <h4 class="fs-20 text-black">Earnings</h4>
+                                            <p class="fs-13">All Platform Earnings</p>
+                                        </div>
+                                        <div class="card-action card-tabs mt-3 mt-sm-0">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#monthly"
+                                                        role="tab" aria-selected="true">
+                                                        Monthly
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#yearly-tab" role="tab"
+                                                        aria-selected="false">
+                                                        Yearly
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body tab-content card-table">
+                                        <div class="tab-pane fade active show" id="monthly">
+                                            <div class="row">
+                                                <div class="col-xl-3 mb-3 col-lg-3 col-md-3">
+                                                    <div class="border border-dark media align-items-center p-4">
+                                                        <!-- add rounded-circle for circle on img -->
+                                                        <img class="mr-3 bg-dark p-3" src="/assets/img/1.svg" alt="">
+                                                        <div class="media-body">
+                                                            <h2 class="text-black fs-20 mb-2 font-w600" id="monthlyETH">
+                                                                0</h2>
+                                                            <span class="fs-14 font-w600">ETH</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 mb-3 col-lg-3 col-md-3">
+                                                    <div class="border border-warning media align-items-center p-4">
+                                                        <img class="mr-3 bg-warning p-3" src="/assets/img/97.svg"
+                                                            alt="">
+                                                        <div class="media-body">
+                                                            <h2 class="text-black fs-20 mb-2 font-w600" id="monthlyBNB">
+                                                                0</h2>
+                                                            <span class="fs-14 font-w600">BNB</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 mb-3 col-lg-3 col-md-3">
+                                                    <div class="border border-primary media align-items-center p-4">
+                                                        <img class="mr-3 bg-primary p-3" src="/assets/img/137.svg"
+                                                            alt="">
+                                                        <div class="media-body">
+                                                            <h2 class="text-black fs-20 mb-2 font-w600"
+                                                                id="monthlyMATIC">0</h2>
+                                                            <span class="fs-14 font-w600">MATIC</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 mb-3 col-lg-3 col-md-3">
+                                                    <div class="border border-danger media align-items-center p-4">
+                                                        <img class="mr-3 bg-danger p-3" src="/assets/img/43114.svg"
+                                                            alt="">
+                                                        <div class="media-body">
+                                                            <h2 class="text-black fs-20 mb-2 font-w600"
+                                                                id="monthlyAVAX">0</h2>
+                                                            <span class="fs-14 font-w600">AVAX</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="yearly-tab">
+                                            <div class="row">
+                                                <div class="col-xl-3 mb-3 col-lg-3 col-md-3">
+                                                    <div class="border border-dark media align-items-center p-4">
+                                                        <!-- add rounded-circle for circle on img -->
+                                                        <img class="mr-3 bg-dark p-3" src="/assets/img/1.svg" alt="">
+                                                        <div class="media-body">
+                                                            <h2 class="text-black fs-20 mb-2 font-w600" id="yearlyETH">
+                                                                0</h2>
+                                                            <span class="fs-14 font-w600">ETH</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 mb-3 col-lg-3 col-md-3">
+                                                    <div class="border border-warning media align-items-center p-4">
+                                                        <img class="mr-3 bg-warning p-3" src="/assets/img/97.svg"
+                                                            alt="">
+                                                        <div class="media-body">
+                                                            <h2 class="text-black fs-20 mb-2 font-w600" id="yearlyBNB">
+                                                                0</h2>
+                                                            <span class="fs-14 font-w600">BNB</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 mb-3 col-lg-3 col-md-3">
+                                                    <div class="border border-primary media align-items-center p-4">
+                                                        <img class="mr-3 bg-primary p-3" src="/assets/img/137.svg"
+                                                            alt="">
+                                                        <div class="media-body">
+                                                            <h2 class="text-black fs-20 mb-2 font-w600"
+                                                                id="yearlyMATIC">0</h2>
+                                                            <span class="fs-14 font-w600">MATIC</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 mb-3 col-lg-3 col-md-3">
+                                                    <div class="border border-danger media align-items-center p-4">
+                                                        <img class="mr-3 bg-danger p-3" src="/assets/img/43114.svg"
+                                                            alt="">
+                                                        <div class="media-body">
+                                                            <h2 class="text-black fs-20 mb-2 font-w600" id="yearlyAVAX">
+                                                                0</h2>
+                                                            <span class="fs-14 font-w600">AVAX</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-xxl-12 col-lg-12">
+                                <div class="card">
+                                    <div class="card-header d-sm-flex d-block pb-0 border-0">
+                                        <div>
+                                            <h4 class="text-black fs-20">
+                                                Total User
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body" id="user-activity">
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="user" role="tabpanel">
+                                                <canvas id="activityLine" height="350"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--**********************************
+            Content body end
+        ***********************************-->
+
+                <!--**********************************
+            Footer start
+        ***********************************-->
+
+                <%- include('footer'); -%>
+
+                    <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+
+    <script src="/admin/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/deznav-init.js"></script>
+    <script src="/admin/assets/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="/admin/assets/vendor/peity/jquery.peity.min.js"></script>
+
+    <script src="/admin/js/dashboard.js"></script>
+</body>
+
+<!-- xhtml/index.html08:18:50 -->
+
+</html>

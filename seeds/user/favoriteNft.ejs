@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Favorite | NFT Talent</title>
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+
+    <!--=======================================
+            Modal Start Here
+    ========================================-->
+
+    <%- include('sidebar.ejs') %>
+
+        <!--=======================================
+                Modal End Here
+    ========================================-->
+
+        <!--=======================================
+                Navbar Start Here
+    ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <%- include('navbar.ejs') %>
+            </div>
+        </div>
+
+        <!--=======================================
+                Navbar End Here
+    ========================================-->
+
+        <div class="explore-artwork">
+            <div class="container-fluid">
+                <div class="explore-artwork-inr">
+                    <div class="heading-otr">
+                        <div class="head-otr">
+                            <h3 class="heading heading-h3">Favorite NFTs</h3>
+                        </div>
+                    </div>
+                    <span class="line"></span>
+                    <div class="row row-custom-main">
+                        <div id="tab-1" class="tab-content active">
+                            <div class="row row-custom-inr" id="favorite-nft-card">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-btn-otr">
+                            <div class="col-btn-inr" id="containerDiv">
+                                <a id="load-more-fav" href="javascript:void(0)"
+                                    class="btn-outline2 btn-wallet load-more-collections" tabindex="0">Load More
+                                    Artworks</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =======================================
+            Footer & Copyright Section Start Here
+        ========================================-->
+
+        <%- include('footer.ejs') %>
+
+            <!--=======================================
+            Footer & Copyright Section End Here
+        ========================================-->
+
+            <script src="/user/js/favoriteNft.js"></script>
+
+
+</body>
+
+</html>

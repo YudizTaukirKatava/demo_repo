@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Verify Your Email | NFT Talent</title>
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+
+    <!--=======================================
+            Modal Start Here
+    ========================================-->
+
+    <%- include('sidebar.ejs') %>
+
+        <!--=======================================
+                Modal End Here
+    ========================================-->
+
+        <!--=======================================
+                Navbar Start Here
+    ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <%- include('navbar.ejs') %>
+            </div>
+        </div>
+
+        <!--=======================================
+                Navbar End Here
+    ========================================-->
+
+        <!-- TODO: Body goes here -->
+
+        <div class="single-collection-main">
+            <div class="container-fluid">
+                <div class="single-collection-otr">
+                    <div id="verify-link-success" class="single-collection-showcase" style="display: none;">
+                        <div class="single-collection-name">
+                            <h1 class="heading-h4">Account Verified</h1>
+                        </div>
+                        <div class="single-collection-desc">
+                            <p>Your account has been verified successfully.</p>
+                        </div>
+                    </div>
+                    <div id="verify-link-expired" class="single-collection-showcase" style="display: none;">
+                        <div class="single-collection-name">
+                            <h1 class="heading-h4">Link Expired</h1>
+                        </div>
+                        <div class="single-collection-desc">
+                            <p>The link you are trying to access is expired or invalid.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- =======================================
+            Footer & Copyright Section Start Here
+        ========================================-->
+
+        <%- include('footer.ejs') %>
+
+            <!--=======================================
+            Footer & Copyright Section End Here
+        ========================================-->
+
+            <script src="/user/js/verify-email.js"></script>
+
+
+</body>
+
+</html>
