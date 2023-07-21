@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+
+    <!--=======================================
+            Modal Start Here
+    ========================================-->
+
+    <%- include('sidebar.ejs') %>
+
+        <!--=======================================
+                Modal End Here
+    ========================================-->
+
+        <!--=======================================
+                Navbar Start Here
+    ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <%- include('navbar.ejs') %>
+            </div>
+        </div>
+
+        <!--=======================================
+                Navbar End Here
+    ========================================-->
+
+        <!-- TODO: Body goes here -->
+
+        <div class="live-acution-home2 search-result-collections" id="search-result-collection-otr">
+            <div class="container-fluid">
+                <div class="live-auction-inr hot-collection-inr">
+                    <h5 class="heading-h5" id="collectionCount">0 Collections</h5>
+                    <span class="line"></span>
+                    <div class="row row-custom row row-custom owl-carousel owl-theme" id="search-result-collections">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- creators start -->
+        <div class="creator-main-home2">
+            <div class="pattern-right"><img src="../assets/img/pattern-right.svg" alt="right"></div>
+            <div class="container-fluid">
+                <div class="creator-main-inr">
+                    <h5 class="heading-h5" id="creatorsCount">0 Creators</h5>
+                    <div class="search-tag">
+                        <p id="searchString">Cat</p>
+                        <button class="clear-search"> <img src="/assets/img/cancel.svg" alt="close"></button>
+                    </div>
+                    <span class="line"></span>
+                    <div class="row row-custom" id="searchedCreator-of-week">
+
+                        <div class="responsive">
+                            <a href="/explore-creators" class="view-all">
+                                <p class="View-p body-sb">View All Creators</p>
+                                <svg class="arrow-icon" width="18" height="16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#000" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+
+                    </div>
+                    <a id="loadCreatorsBtn" href="javascript:void(0)"
+                        class="btn-outline2 btn-wallet load-more-collections" start="0">Load More
+                        Creators</a>
+                </div>
+            </div>
+
+        </div>
+        <!-- creators end -->
+
+        <div class="explore-artwork-home2 search-result-nfts">
+            <div class="pattern-left"><img src="../assets/img/pattern-left.svg" alt="left"></div>
+            <div class="container-fluid">
+                <div class="explore-artwork-inr">
+                    <h5 class="heading-h5" id="nftCount">0 NFTs</h5>
+                    <div class="heading-otr">
+
+
+
+                    </div>
+                    <div class="teb-main explore-artwork-tabs">
+                        <div class="tab-otr">
+                            <span class="line"></span>
+                            <div class="row row-custom-main">
+                                <div class="tab-content active">
+                                    <div id="searchNftContainer" class="row row-custom-inr">
+
+                                    </div>
+                                    <a id="searchLoadBtn" href="javascript:void(0)"
+                                        class="btn-outline2 btn-wallet load-more-collections" start="0">Load More
+                                        Artworks</a>
+                                </div>
+
+                                <div class="responsive">
+                                    <a href="/explore-artworks" class="view-all">
+                                        <p class="View-p body-sb">View All Artworks</p>
+                                        <svg class="arrow-icon" width="18" height="16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#000"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- =======================================
+            Footer & Copyright Section Start Here
+        ========================================-->
+
+        <%- include('footer.ejs') %>
+
+            <!--=======================================
+            Footer & Copyright Section End Here
+        ========================================-->
+
+            <script src="/user/js/assets.js"></script>
+
+            <!-- <script>
+
+                $(".search-tag .clear-search").on("click", function () {
+                    $("#search-result-collection-otr").addClass("d-none");
+                    $(this).parent().addClass("d-none");
+                    $(".search-result-nfts .line").toggle();
+                })
+
+
+
+
+
+
+                $('#search-result-collections').owlCarousel({
+                    loop: false,
+                    margin: 20,
+                    dots: false,
+                    autoplay: false,
+                    nav: true,
+                    navText: [
+                        "<img src='/assets/img/svg/ArrowRightWhite.svg'>",
+                        "<img src='/assets/img/svg/ArrowLeftWhite.svg'>",
+                    ],
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: false,
+                            dots: true,
+                        },
+                        575: {
+                            items: 2,
+                        },
+                        992: {
+                            items: 3,
+                        },
+                        1300: {
+                            items: 4,
+                        },
+                    },
+                });
+            </script> -->
+</body>
+
+</html>

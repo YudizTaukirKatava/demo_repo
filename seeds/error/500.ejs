@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/images/favicon/favicon.ico" />
+    <!-- <link href="/assets/css/admin-style.css" rel="stylesheet" /> -->
+    <%- include('../user/css-lib') %>
+        <!-- <link href="../admin/css/admin-style.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+    <%- include('../user/sidebar') %>
+        <div class="main-hero">
+            <div class="hero-main-inr"><%- include('../user/navbar') %></div>
+        </div>
+        <div class="error-main">
+            <img class="img-main img-fluid" src="../assets/img/500-dark.svg" alt="img" />
+            <h2 class="heading heading-h2">Ooops! Something went wrong</h2>
+            <h4 class="heading heading-h4">
+                Please check the URL and Try Again.
+            </h4>
+            <div class="action-otr">
+                <a href="/" class="btn-fill btn-create">Back to Home</a>
+            </div>
+        </div>
+        <%- include('../user/footer') %>
+</body>
+
+</html>

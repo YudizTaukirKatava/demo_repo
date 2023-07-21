@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- xhtml/index.html08:17:22 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home | NFT Talent</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/img/favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="/admin/assets/vendor/chartist/css/chartist.min.css" />
+
+    <link rel="stylesheet" href="/assets/css/simplepicker.css">
+
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/admin/css/admin-style.css" />
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+        <!-- Include Header -->
+        <%- include('header'); -%>
+
+            <!-- Include Sidebar -->
+            <%- include('sidebar'); -%>
+
+                <!--**********************************
+            Content body start
+        ***********************************-->
+                <div class="content-body">
+                    <div class="hero-single-artwork">
+                        <div class="container-fluid">
+                            <div class="hero-inr">
+                                <div class="nft-single-img-wrapper">
+                                    <a class="img-otr img-tilt" data-tilt>
+                                        <img class="img-artwork img-fluid" id="single-artwork"
+                                            src="/assets/img/New_Project_1.jpg"
+                                            onerror="this.onerror=null;this.src='/assets/img/New_Project_1.jpg';"
+                                            alt="artwork-img" />
+                                    </a>
+                                    <!-- <div class="timer-otr copies">
+                                                <div class="body-sb copies-text">ERC-1155
+                                                </div>
+                                            </div> -->
+                                </div>
+                                <div class="icons-div">
+                                    <div class="icons-div-inr">
+                                        <div class="icon-otr icon-div">
+                                            <svg class="icon" width="24" height="24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.75 20.25V4.5M3.75 15.75c6-4.5 10.5 4.5 16.5 0V4.5c-6 4.5-10.5-4.5-16.5 0"
+                                                    stroke="#999" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="icons-div-inr">
+                                        <div class="heart-main icon-div">
+                                            <a class="heart-otr eye-otr">
+                                                <!-- <i class="fa-solid fa-eye"></i> -->
+                                                <img src="/assets/img/grid-logo.png" alt="grid-logo">
+                                            </a>
+                                            <p class="body-sb num" id="category">Category Name</p>
+                                        </div>
+                                        <div class="heart-main icon-div">
+                                            <a class="heart-otr eye-otr">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                            <p class="body-sb num" id="nft-views">0</p>
+                                        </div>
+                                        <div class="heart-main icon-div">
+                                            <a class="heart-otr copy-otr">
+                                                <i class="fa-regular fa-copy"></i>
+                                            </a>
+                                            <p class="body-sb num" id="copies-of-nft">0</p>
+                                        </div>
+                                        <div class="heart-main icon-div" id="singleDiv"></div>
+
+                                    </div>
+                                </div>
+                                <span class="circle"></span>
+                            </div>
+                        </div>
+                        <img class="circle-1" src="/assets/img/svg/circles-1.svg" alt="circale" />
+                        <img class="circle-2" src="/assets/img/svg/circles-2.svg" alt="circale" />
+                    </div>
+
+                    <div class="artwork-body">
+                        <div class="container-fluid">
+                            <div class="artwork-body-inr" id="artwork-container">
+                                <div class="row">
+                                    <div class="col-lg-6 col-left-otr">
+                                        <div class="col-left-inr">
+                                            <div class="user-main-otr">
+                                                <div class="create-otr">
+                                                    <div class="create-inr">
+                                                        <a href="" class="create-img" id="postedByHref">
+                                                            <img class="img-create" src=""
+                                                                onerror="this.onerror=null;this.src='/assets/img/male-avatar-maker.jpg';"
+                                                                alt="create-img" id="postedByImg" />
+                                                            <div class="check-otr" id="blue-tick-postedBy">
+                                                                <svg class="check-icon" width="10" height="10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M8.438 2.813L4.061 7.188 1.876 5"
+                                                                        stroke="#e42575" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                        <div class="create-content">
+                                                            <p class="body-s create-p">
+                                                                Created by
+                                                            </p>
+                                                            <a href="" class="body-sb create-pb text-white"
+                                                                target="_blank" id="postedBy">Meta
+                                                                Boss</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="create-otr">
+                                                    <div class="create-inr">
+                                                        <a href="" class="create-img" id="ownedByHref">
+                                                            <img class="img-create" src=""
+                                                                onerror="this.onerror=null;this.src='/assets/img/male-avatar-maker.jpg';"
+                                                                alt="create-img" id="ownedByImg" />
+                                                            <div class="check-otr" id="blue-tick-ownedBy">
+                                                                <svg class="check-icon" width="10" height="10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M8.438 2.813L4.061 7.188 1.876 5"
+                                                                        stroke="#e42575" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                        <div class="create-content">
+                                                            <p class="body-s create-p">
+                                                                Owned by
+                                                            </p>
+                                                            <a href="" class="body-sb create-pb text-white"
+                                                                target="_blank" id="ownedBy">NFT
+                                                                King</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="create-otr">
+                                                    <div class="create-inr">
+                                                        <a href="" class="create-img" id="collectionHref">
+                                                            <img class="img-create" src=""
+                                                                onerror="this.onerror=null;this.src='/assets/img/male-avatar-maker.jpg';"
+                                                                alt="create-img" id="collectionImg" />
+                                                            <!-- <div class="check-otr" id="blue-tick-ownedBy">
+                                                                        <svg class="check-icon" width="10" height="10" fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M8.438 2.813L4.061 7.188 1.876 5" stroke="#e42575"
+                                                                                stroke-width="2" stroke-linecap="round"
+                                                                                stroke-linejoin="round" />
+                                                                        </svg>
+                                                                    </div> -->
+                                                        </a>
+                                                        <div class="create-content">
+                                                            <p class="body-s create-p">
+                                                                Collection
+                                                            </p>
+                                                            <a href="" class="body-sb create-pb text-white"
+                                                                target="_blank" id="collectionName">
+                                                                <!-- Collection name -->
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h2 class="heading-h2 head" id="nft-name">
+                                                <!-- NFT name -->
+                                            </h2>
+                                            <p class="body-m desc para1" id="nft-desc">
+                                                <!-- Description -->
+                                            </p>
+                                            <a id="view-ipfs" href="" target="_blank" class="view-ipfs body-sb"><i
+                                                    class="fa-solid fa-eye"></i> View on IPFS <i
+                                                    class="fas fa-arrow-up"></i></a>
+                                            <div class="royalty-otr" id="nft-all-royalties" style="display: none;">
+                                                <div class="royalty-title">
+                                                    <h4 class="heading-h4">Royalties <span
+                                                            id="royaltyPercentage">0%</span></h4>
+                                                    <p>Split royalties are automatically deposited into each recipient's
+                                                        wallet</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-right-otr" style=" 
+                                            z-index: 10;">
+                                        <div class="col-right-inr" id="sale-details">
+                                            <div class="bid-details" id="bid-details">
+                                                <h4 class="heading-h4 bid-head" id="sale-head">
+                                                    Bid Details
+                                                </h4>
+                                                <div class="boxes-main" id="sale-main-box">
+                                                    <div class="bid-main" id="bid-main">
+                                                        <p class="bid body-mb" id="sale-title">
+                                                            Current Bid
+                                                        </p>
+                                                        <h3 class="heading-h3 bid-head" id="nft-price">
+                                                            0
+                                                        </h3>
+                                                        <p class="dollor body-mb" id="priceInUsd">
+                                                            $0
+                                                        </p>
+                                                    </div>
+                                                    <div class="auction-main" id="auction-time">
+                                                        <p class="body-mb acution" id="auctionHead">
+
+                                                        </p>
+                                                        <div id="clock" class="timer">
+                                                            <div class="hours-main main">
+                                                                <p class="heading-h3 time-inr" id="days"></p>
+                                                                <p class="hours-p body-mb">
+                                                                    Days
+                                                                </p>
+                                                            </div>
+                                                            <div class="hours-main main">
+                                                                <p class="heading-h3 time-inr" id="hours"></p>
+                                                                <p class="hours-p body-mb">
+                                                                    Hours
+                                                                </p>
+                                                            </div>
+                                                            <div class="minutes-main main">
+                                                                <p class="heading-h3 time-inr" id="minutes"></p>
+                                                                <p class="minutes-p body-mb">
+                                                                    Minutes
+                                                                </p>
+                                                            </div>
+                                                            <div class="seconds-main main">
+                                                                <p class="heading-h3 time-inr" id="seconds"></p>
+                                                                <p class="seconds-p body-mb">
+                                                                    Seconds
+                                                                </p>
+                                                                <p class="seconds-p-2 body-mb">
+                                                                    Sec
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action-otr row d-none" id="sale-btn">
+                                                    <!-- <a href="" class="btn-fill place-bid">Place Bid</a> -->
+                                                </div>
+                                                <div class="auction-btns-otr row d-none" id="saleBtns">
+                                                    <a href="#" class="single-auction-btn" id="put-on-sale">
+                                                        <i class="fa-solid fa-tag"></i>
+                                                        <span>Fixed Price</span>
+                                                    </a>
+                                                    <a href="#" class="single-auction-btn" id="is-timed-auction">
+                                                        <i class="fa-solid fa-clock"></i>
+                                                        <span>Timed Auction</span>
+                                                    </a>
+                                                    <a href="#" class="single-auction-btn put-on-auction">
+                                                        <i class="fa-solid fa-infinity"></i>
+                                                        <span>Unlimited Auction</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-8 ">
+                                                    <div class="row date-time-picker">
+                                                        <div class="col-md-12 date-time-title"><span>Starting Date &
+                                                                Time</span>
+                                                        </div>
+
+
+                                                        <!-- starting date starts -->
+                                                        <div class="col-md-12 pick-otr pick-date">
+                                                            <label for="date_picker">Date: </label>
+
+                                                            <div class="dropdown pick-date-dropdown">
+                                                                <button class="btn btn-secondary dropdown-toggle"
+                                                                    type="button" id="dropdownMenuButton2"
+                                                                    data-bs-toggle="dropdown" aria-expanded="true">
+                                                                    Select Date
+                                                                </button>
+                                                                <ul class="dropdown-menu"
+                                                                    aria-labelledby="dropdownMenuButton2">
+                                                                    <li><a class="dropdown-item"
+                                                                            id="afterListing-auction-create-nft">Right
+                                                                            After Listing</a></li>
+                                                                    <li><a class="dropdown-item"
+                                                                            id="specific-auction-crate-nft">Pick
+                                                                            Specific Date</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="startPicker"></div>
+                                                        </div>
+                                                        <div class="col-md-12 date-time-title"><span>Expiration Date &
+                                                                Time</span>
+                                                        </div>
+
+                                                        <!----- Expiration date starts ----->
+                                                        <div class="col-md-12 pick-otr pick-date">
+                                                            <label for="date_picker">Date: </label>
+
+                                                            <div class="dropdown pick-expiration-date-dropdown">
+                                                                <button class="btn btn-secondary dropdown-toggle"
+                                                                    type="button" id="dropdownMenuButton3"
+                                                                    data-bs-toggle="dropdown" aria-expanded="true">
+                                                                    Select Date
+                                                                </button>
+                                                                <ul class="dropdown-menu"
+                                                                    aria-labelledby="dropdownMenuButton3">
+                                                                    <li><a class="dropdown-item">1 Day from Now</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item">3 Days from Now</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item">5 Days from Now</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                            id="specificEnd-auction-crate-nft">Pick
+                                                                            Specific Date</a></li>
+
+                                                                </ul>
+                                                            </div>
+                                                            <div class="endPicker"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 mb-2 text-center d-none"
+                                                    id="put-on-auction">
+                                                    <a class="btn-fill place-bid put-on-auction">Put on
+                                                        Auction</a>
+                                                </div>
+                                                <!-- bid and buy button -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cusotm activites-main-row flex-column">
+                                        <div class=" col-left-otr">
+                                            <div class="activity-details" id="bid-section">
+                                                <h4 class="heading-h4 activity-head">
+                                                    Bid History
+                                                </h4>
+                                                <div class="place-bid-main-group" id="bid-history">
+                                                    <!-- Bid history -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-right-otr">
+                                            <div class="activity-details">
+                                                <h4 class="heading-h4 activity-head">
+                                                    Activity
+                                                </h4>
+                                                <div class="place-bid-main-group" id="activity-tab">
+                                                    <!-- Activity tab -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--**********************************
+            Content body end
+        ***********************************-->
+
+                <!--**********************************
+            Footer start
+        ***********************************-->
+
+                <%- include('footer'); -%>
+
+                    <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--=======================================
+                    Put On Sale Modal Start Here
+                ========================================-->
+
+    <div id="put-onSale-modal" class="modal buy-now-modal">
+        <div class="_main">
+            <a href="" class="close-icn">
+                <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+            </a>
+            <div class="_container">
+                <div class="_title">
+                    <h3>Put on Sale</h3>
+                </div>
+                <hr />
+                <div class="_content">
+                    <div class="quantity-inpt row">
+                        <label for="" class="col-6"><span>Price</span><span>:</span></label>
+                        <div class="col-5 cntr">
+                            <input type="number" id="sale-price" value="1" />
+                        </div>
+                    </div>
+
+                    <div class="quantity-inpt row" id="sale-quantity-field">
+                        <label for="" class="col-6"><span>Quantity</span><span>:</span></label>
+                        <div class="col-5 cntr">
+                            <span class="minus">&minus;</span>
+                            <input type="text" id="sale-quantity" value="1" />
+                            <span class="plus">&plus;</span>
+                        </div>
+                    </div>
+
+                    <div class="total-eth row">
+                        <label for="" class="col-6"><span>Total</span><span>:</span></label>
+                        <div class="col-5 cntr">
+                            <span id="sale-now-total" class="sale-price-total-val">0</span>
+                            <span id="sale-currency-symbol">BNB</span>
+                        </div>
+                    </div>
+                    <div class="validation-block row">
+                        <label for="" class="col-6"></label>
+                        <div class="col-5 cntr" id="saleError"></div>
+                    </div>
+                </div>
+                <hr />
+                <div class="_footer">
+                    <button id="put-on-saleBtn" class="place-bid-final">
+                        Sale
+                    </button>
+                    <button id="close-sale" class="place-bid-final close">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=======================================
+                     Put On Sale Modal End Here
+                ========================================-->
+    <!--=======================================
+                    Put On Auction Modal Start Here
+                ========================================-->
+
+    <div id="put-onAuction-modal" class="modal buy-now-modal">
+        <div class="_main">
+            <a href="" class="close-icn">
+                <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+            </a>
+            <div class="_container">
+                <div class="_title">
+                    <h3>Put on Auction</h3>
+                </div>
+                <hr />
+                <div class="_content">
+                    <div class="quantity-inpt row">
+                        <label for="" class="col-6"><span>Price of single NFT</span><span>:</span></label>
+                        <div class="col-5 cntr">
+                            <input type="number" id="auction-price" value="1" />
+                        </div>
+                    </div>
+
+                    <div class="quantity-inpt row" id="auction-quantity-field">
+                        <label for="" class="col-6"><span>Quantity</span><span>:</span></label>
+                        <div class="col-5 cntr">
+                            <span class="minus">&minus;</span>
+                            <input type="text" id="auction-quantity" value="1" />
+                            <span class="plus">&plus;</span>
+                        </div>
+                    </div>
+
+                    <div class="total-eth row">
+                        <label for="" class="col-6"><span>Total</span><span>:</span></label>
+                        <div class="col-5 cntr">
+                            <span id="auction-now-total" class="sale-price-total-val">0</span>
+                            <span id="auction-currency-symbol">BNB</span>
+                        </div>
+                    </div>
+                    <div class="validation-block row">
+                        <label for="" class="col-6"></label>
+                        <div class="col-5 cntr" id="auctionError"></div>
+                    </div>
+                </div>
+                <hr />
+                <div class="_footer">
+                    <button id="put-on-auctionBtn" class="place-bid-final">
+                        Auction
+                    </button>
+                    <button id="close-auction" class="place-bid-final close">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+
+    <script src="/admin/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/deznav-init.js"></script>
+    <script src="/admin/assets/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="/admin/assets/vendor/peity/jquery.peity.min.js"></script>
+
+
+    <!-- <script src="/assets/js/app.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <!-- <script src="/assets/libs/jquery.countdown/jquery.countdown.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+    <!-- ejs -->
+    <script src="/assets/js/ejs.min.js"></script>
+    <script src="/user/cards/card.templates.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".date-time-picker").hide();
+
+            $(".single-auction-btn").on("click", function (e) {
+                $(".active-single-auction").removeClass("active-single-auction");
+                $(this).addClass("active-single-auction")
+                e.preventDefault();
+                if ($(this).hasClass("active-single-auction") && $(this).attr("id") === "is-timed-auction") {
+                    $(".date-time-picker").fadeIn();
+                    $("#put-on-auction").removeClass('d-none');
+                    $("#put-on-auction").attr('auctiontype', "time");
+
+                } else {
+                    $(".date-time-picker").fadeOut();
+                    $("#put-on-auction").addClass('d-none');
+                    $("#put-on-auction").attr('auctiontype', "");
+
+                }
+
+            });
+        })
+    </script>
+
+    <!-- create nft new date time picker -->
+    <script src="/assets/js/simplepicker.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let startPicker = new SimplePicker(".startPicker");
+            $("#pick-time-modal").hide();
+            $("#pick-date-modal").hide();
+            $(".pick-starting-time-column").hide();
+            $(".pick-expiration-time-column").hide();
+            $("#pick-expiration-date-modal").hide();
+
+            // =======Starting date=======
+            $(".pick-date-dropdown #dropdownMenuButton2").on("click", function (e) {
+                $(".pick-date-dropdown .dropdown-menu").slideToggle();
+                e.stopPropagation();
+            })
+            $(document).click(function () {
+                $(".pick-date-dropdown .dropdown-menu").slideUp();
+            });
+            $(".pick-date-dropdown .dropdown-item").on("click", function () {
+                if ($(this).attr("id") === "afterListing-auction-create-nft") {
+                    var txt = $(this).text().trim();
+                    $(".pick-date-dropdown #dropdownMenuButton2").html(txt).val('after-listening');
+                    $(".pick-date-dropdown #dropdownMenuButton2").css("color", "#fff");
+                    $(".pick-starting-time-column").hide();
+
+                } else if ($(this).attr("id") == "specific-auction-crate-nft") {
+                    var txt = $(this).text().trim();
+
+                    $(".pick-date-dropdown #dropdownMenuButton2").html(txt).val('Specific-time');
+                    $(".pick-date-dropdown #dropdownMenuButton2").css("color", "#fff");
+                    startPicker.open();
+
+                    $("body").css("overflow", "hidden");
+                }
+                else {
+                    $(".pick-date-dropdown #dropdownMenuButton2").html("Select Date").val();
+
+                }
+                startPicker.on('submit', (date, readableDate) => {
+                    $(".pick-date-dropdown #dropdownMenuButton2").html(readableDate).val(readableDate);
+                    $("body").css("overflow", "hidden auto");
+                });
+
+                $(".pick-date-dropdown .dropdown-menu").slideUp();
+            })
+            // =======expiration date=======
+            let endPicker = new SimplePicker(".endPicker");
+
+            $(".pick-expiration-date-dropdown #dropdownMenuButton3").on("click", function (e) {
+                $(".pick-expiration-date-dropdown .dropdown-menu").slideToggle();
+                e.stopPropagation();
+            })
+            $(document).click(function () {
+                $(".pick-expiration-date-dropdown .dropdown-menu").slideUp();
+            });
+            $(".pick-expiration-date-dropdown .dropdown-item").on("click", function () {
+                if ($(this).attr("id") === "specificEnd-auction-crate-nft") {
+                    var txt = $(this).text().trim();
+                    $(".pick-expiration-date-dropdown #dropdownMenuButton3").html(txt).val('txt');
+                    $(".pick-expiration-date-dropdown #dropdownMenuButton3").css("color", "#fff");
+                    endPicker.open();
+
+                    $("body").css("overflow", "hidden");
+                } else {
+                    var txt = $(this).text().trim();
+                    $(".pick-expiration-date-dropdown #dropdownMenuButton3").html(txt);
+                    $(".pick-expiration-date-dropdown #dropdownMenuButton3").val(txt);
+                    $(".pick-expiration-date-dropdown #dropdownMenuButton3").css("color", "#fff");
+                    $(".pick-expiration-time-column").hide();
+                }
+                endPicker.on('submit', (date, readableDate) => {
+                    $(".pick-expiration-date-dropdown #dropdownMenuButton3").html(readableDate).val(readableDate);
+                    $("body").css("overflow", "hidden auto");
+                });
+
+                $(".pick-expiration-date-dropdown .dropdown-menu").slideUp();
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".date-time-picker").hide();
+
+            $(".single-auction-btn").on("click", function (e) {
+                $(".active-single-auction").removeClass("active-single-auction");
+                $(this).addClass("active-single-auction")
+                e.preventDefault();
+                if ($(this).hasClass("active-single-auction") && $(this).attr("id") === "is-timed-auction") {
+                    $(".date-time-picker").fadeIn();
+                } else {
+                    $(".date-time-picker").fadeOut();
+                }
+
+            });
+        })
+    </script>
+
+
+    <script src="/admin/js/nft-detail.js"></script>
+</body>
+
+<!-- xhtml/index.html08:18:50 -->
+
+</html>

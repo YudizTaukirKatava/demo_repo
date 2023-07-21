@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- xhtml/index.html08:17:22 -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Manage Collection | NFT Talent</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/img/favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="/assets/vendor/datatables/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="/assets/vendor/datatables/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" href="/admin/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" />
+
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="/admin/css/admin-style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!-- Include Header -->
+        <%- include('header'); -%>
+
+            <!-- Include Sidebar -->
+            <%- include('sidebar'); -%>
+
+                <!--**********************************
+            Content body start
+        ***********************************-->
+                <div class="content-body">
+                    <!-- row -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Collection</h4>
+                                        <button class="btn btn-primary rounded-sm" id="btnAddNewCollection">Add
+                                            New</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table id="collectionTable" class="display">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Edit</th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="userList"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    </div>
+    <!--**********************************
+            Content body end
+        ***********************************-->
+
+    <!--**********************************
+            Footer start
+        ***********************************-->
+
+    <%- include('footer'); -%>
+
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+        <!-- collection Modal -->
+        <div class="modal fade show" id="collectionModel" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <a href="#" class="close-modal" data-dismiss="modal" aria-label="Close">
+                        <span class="iconify text-brick-red rounded-circle" data-icon="carbon:close-filled"
+                            data-inline="false" style="background-color: #fff;" data-width="20" data-height="20"></span>
+                    </a>
+                    <div class="modal-body">
+                        <div class="content-sec">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="font-family-infra-semibold text-capitalize text-center mb-4"
+                                        id="modelTitle">
+                                        Collection</h3>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col bas-form">
+                                    <!-- <div class="create-collection-img">
+                                        <div id="uploadArea" class="upload-area">
+                                            <div class="upload-area__header">
+                                                <p class="upload-area__title"></p>
+                                                <p class="upload-area__paragraph">
+                                                    <strong class="upload-area__tooltip">
+                                                        <span class="upload-area__tooltip-data"></span>
+                                                    </strong>
+                                                </p>
+                                            </div>
+                                            <div id="dropZoon" class="upload-area__drop-zoon drop-zoon">
+                                                <span class="drop-zoon__icon">
+                                                    <img src="/assets/img/create-upload.svg" alt="upload">
+                                                </span>
+                                                <p class="desc body-sb">
+                                                    JPG, WEBP, JPEG, PNG & GIF. Max 15 MB.
+                                                </p>
+                                                <p class="drop-zoon__paragraph btn-outline1">
+                                                    Browse
+                                                </p>
+                                                <span id="loadingText" class="drop-zoon__loading-text">Please
+                                                    Wait</span>
+                                                <div class="img-main">
+                                                    <img src="../assets/img/user-Image15.jpg" alt="Preview Image"
+                                                        id="previewImage" class="drop-zoon__preview-image"
+                                                        draggable="false" />
+                                                </div>
+                                                <input type="file" id="fileInput" class="drop-zoon__file-input"
+                                                    accept="image/*" />
+                                                <div id="imageUpload-error" class="desc body-sb"></div>
+                                            </div>
+                                            <div id="fileDetails" class="upload-area__file-details file-details">
+                                                <h3 class="file-details__title">
+                                                    Uploaded File
+                                                </h3>
+                                                <div id="uploadedFile" class="uploaded-file">
+                                                    <div class="uploaded-file__icon-container">
+                                                        <i class="bx bxs-file-blank uploaded-file__icon"></i>
+                                                        <span class="uploaded-file__icon-text"></span>
+                                                    </div>
+                                                    <div id="uploadedFileInfo" class="uploaded-file__info">
+                                                        <span class="uploaded-file__name">Project 1</span>
+                                                        <span class="uploaded-file__counter">0%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="box">
+                                        <div class="js--image-preview" id="collection-modal-image"></div>
+                                        <div class="upload-options">
+                                            <label>
+                                                <input type="file" class="image-upload" accept="image/*"
+                                                    id="collectionImage" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collection-info">
+                                <div class="row justify-content-center mb-3">
+                                    <div class="col-4">
+                                        <label>Collection Name:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="collection-name"><input type="text" id="collectionName"></div>
+                                        <label for="CollecitonName" id="lblCollectionName"
+                                            class="text-danger d-none"></label>
+
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-4">
+                                        <label>Collection Description:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="collection-description"><textarea id="collectionDesc"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col text-center">
+                                    <button class="btn btn-primary with-icon mx-auto rounded-sm"
+                                        id="btnSubmitCollection">
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+
+        </div>
+        <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+        <!--**********************************
+        Scripts
+    ***********************************-->
+        <!-- Required vendors -->
+
+        <script src="/admin/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="/admin/js/custom.min.js"></script>
+        <script src="/admin/js/deznav-init.js"></script>
+        <script src="/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+        <script src="/assets/vendor/datatables/js/dataTables.responsive.min.js"></script>
+
+        <script src="/admin/js/collection.js"></script>
+
+
+
+
+
+        <script>
+            function initImageUpload(box) {
+                let uploadField = box.querySelector('.image-upload');
+
+                uploadField.addEventListener('change', getFile);
+
+                function getFile(e) {
+                    let file = e.currentTarget.files[0];
+                    checkType(file);
+                }
+
+                function previewImage(file) {
+                    let thumb = box.querySelector('.js--image-preview'),
+                        reader = new FileReader();
+
+                    reader.onload = function () {
+                        thumb.style.backgroundImage = 'url(' + reader.result + ')';
+                    }
+                    reader.readAsDataURL(file);
+                    thumb.className += ' js--no-default';
+                }
+
+                function checkType(file) {
+                    let imageType = /image.*/;
+                    if (!file.type.match(imageType)) {
+                        throw 'Datei ist kein Bild';
+                    } else if (!file) {
+                        throw 'Kein Bild gewählt';
+                    } else {
+                        previewImage(file);
+                    }
+                }
+
+            }
+
+            // initialize box-scope
+            var boxes = document.querySelectorAll('.box');
+
+            for (let i = 0; i < boxes.length; i++) {
+                let box = boxes[i];
+                initDropEffect(box);
+                initImageUpload(box);
+            }
+
+
+
+            /// drop-effect
+            function initDropEffect(box) {
+                let area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y;
+
+                // get clickable area for drop effect
+                area = box.querySelector('.js--image-preview');
+                area.addEventListener('click', fireRipple);
+
+                function fireRipple(e) {
+                    area = e.currentTarget
+                    // create drop
+                    if (!drop) {
+                        drop = document.createElement('span');
+                        drop.className = 'drop';
+                        this.appendChild(drop);
+                    }
+                    // reset animate class
+                    drop.className = 'drop';
+
+                    // calculate dimensions of area (longest side)
+                    areaWidth = getComputedStyle(this, null).getPropertyValue("width");
+                    areaHeight = getComputedStyle(this, null).getPropertyValue("height");
+                    maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
+
+                    // set drop dimensions to fill area
+                    drop.style.width = maxDistance + 'px';
+                    drop.style.height = maxDistance + 'px';
+
+                    // calculate dimensions of drop
+                    dropWidth = getComputedStyle(this, null).getPropertyValue("width");
+                    dropHeight = getComputedStyle(this, null).getPropertyValue("height");
+
+                    // calculate relative coordinates of click
+                    // logic: click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center
+                    x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10) / 2);
+                    y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10) / 2) - 30;
+
+                    // position drop and animate
+                    drop.style.top = y + 'px';
+                    drop.style.left = x + 'px';
+                    drop.className += ' animate';
+                    e.stopPropagation();
+
+                }
+            }
+
+        </script>
+
+</body>
+
+<!-- xhtml/index.html08:18:50 -->
+
+</html>

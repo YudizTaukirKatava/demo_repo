@@ -1,0 +1,325 @@
+<!--=======================================
+            Modal Start Here
+========================================-->
+
+<div id="myNav" class="overlay-content-otr">
+    <div class="modal-content-custom">
+        <div class="overlay-content">
+            <svg class="icon-close" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 1L1 17M17 17L1 1" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <div class="logo-otr">
+                <a href="/" class="logo-inr">
+                    <img class="logo" src="/assets/img/logo.svg" alt="brand-logo" />
+                </a>
+            </div>
+            <div class="input-main" id="searchBardiv">
+                <input class="input" type="text" placeholder="Search Artworks" id="searchBarData" />
+                <div onclick="searchNFT()">
+                    <svg class="search-icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 15A7 7 0 108 1a7 7 0 000 14zM12.95 12.95L17 17" stroke="#a197aa" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="navigation-otr">
+                <div class="mobile-profile d-lg-none" style="display: none;">
+                    <span class="line"></span>
+                    <div class="profile-otr">
+                        <a class="profile-inr click-open3">
+                            <img class="creator profile-pic" src="/assets/img/male-avatar-maker.jpg" alt="creator"
+                                onerror="this.onerror=null;this.src='/assets/img/male-avatar-maker.jpg';">
+                            <div class="check-otr">
+                                <svg class="check-icon" width="10" height="10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.438 2.813L4.061 7.188 1.876 5" stroke="#e42575" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                            <p class="price body-sb user-bal">0</p>
+                        </a>
+                    </div>
+                    <div class="box-otr">
+                        <div class="user-main">
+                            <h3 class="user-head heading-h4 user-name"></h3>
+                            <div class="check-otr" id="blue-tick">
+                                <svg class="check-icon" width="14" height="14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.813 3.938l-6.126 6.124L2.626 7" stroke="#fff" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <a class="address-main" id="copy-address">
+                            <p class="address body-s user-addr" id="user-wallet"></p>
+                            <div class="copy-icon-otr">
+                                <svg class="copy-icon" width="18" height="18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.636 12.636H15a2 2 0 002-2V3a2 2 0 00-2-2H7.364a2 2 0 00-2 2v2.364"
+                                        stroke="#CFCFCF" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M10.636 5.364H3a2 2 0 00-2 2V15a2 2 0 002 2h7.636a2 2 0 002-2V7.364a2 2 0 00-2-2z"
+                                        stroke="#CFCFCF" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="link-profile-otr">
+                        <li class="link-profile-inr">
+                            <span class="circle-hover"></span>
+                            <a href="/creator/4adab1db-b8c1-4762-9e91-473936d877e9"
+                                class="profile body-sb user-profile">My
+                                Profile</a>
+                        </li>
+                        <li class="link-profile-inr">
+                            <span class="circle-hover"></span>
+                            <a class="profile body-sb c-pointer" id="my-earnings">My Favourites</a>
+                        </li>
+                        <li class="link-profile-inr">
+                            <span class="circle-hover"></span>
+                            <a class="profile body-sb c-pointer my-earnings" id="my-earnings">Manage Funds</a>
+                        </li>
+                        <li class="link-profile-inr">
+                            <span class="circle-hover"></span>
+                            <a class="profile body-sb c-pointer" id="ticket-support-sb">Ticketing Support System</a>
+                        </li>
+                        <li class="link-profile-inr">
+                            <span class="circle-hover"></span>
+                            <a class="profile body-sb c-pointer" id="refer-friend-sb">Refer a Friend</a>
+                        </li>
+                        <!-- <li class="link-profile-inr">
+                            <span class="circle-hover"></span>
+                            <a href="javascript:void(0)" class="profile body-sb user-disconnect"
+                                style="display: none;">Disconnect Wallet</a>
+                        </li> -->
+                    </ul>
+                    <span class="line"></span>
+                </div>
+                <ul class="navigation-inr">
+
+                    <li class="nav-li">
+                        <a class="nav-a heading-h4 explore">Explore</a>
+                        <ul class="dropdown-otr drop-2">
+                            <li class="dropdown-li">
+                                <a href="/explore-artworks" class="dropdown-a body-mb">Explore Artworks</a>
+                            </li>
+                            <li class="dropdown-li">
+                                <a href="/explore-collections" class="dropdown-a body-mb">Explore Collections</a>
+                            </li>
+                            <li class="dropdown-li">
+                                <a href="/explore-creators" class="dropdown-a body-mb">Explore Creators</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-li">
+                        <a class="nav-a heading-h4 home" href="/activity">Activity</a>
+                        <!-- <ul class="dropdown-otr drop-1">
+                            <li class="dropdown-li">
+                                <a
+                                    href="/"
+                                    class="dropdown-a body-mb"
+                                    >Home</a
+                                >
+                            </li>
+                        </ul> -->
+                    </li>
+
+                    <!-- <li class="nav-li">
+                        <a class="nav-a heading-h4 pages">Pages</a>
+                        <ul class="dropdown-otr drop-3">
+                            
+                            <li class="dropdown-li">
+                                <a
+                                    href="../pages/How-it-Works.html"
+                                    class="dropdown-a body-mb"
+                                    >How it Works</a
+                                >
+                            </li>
+                            <li class="dropdown-li">
+                                <a
+                                    href="../pages/Contact.html"
+                                    class="dropdown-a body-mb"
+                                    >Contact</a
+                                >
+                            </li>
+                            <li class="dropdown-li">
+                                <a
+                                    href="../pages/Login.html"
+                                    class="dropdown-a body-mb"
+                                    >Login</a
+                                >
+                            </li>
+                            <li class="dropdown-li">
+                                <a
+                                    href="../pages/Sign-Up.html"
+                                    class="dropdown-a body-mb"
+                                    >Sign Up</a
+                                >
+                            </li>
+                            <li class="dropdown-li">
+                                <a class="dropdown-a body-mb other-pages"
+                                    >Other Pages</a
+                                >
+                                <ul class="other-dropdown-otr drop-4">
+                                    <li class="other-dropdown-li">
+                                        <a
+                                            href="../pages/404.html"
+                                            class="other-dropdown-a body-mb"
+                                            >404</a
+                                        >
+                                    </li>
+                                    <li class="other-dropdown-li">
+                                        <a
+                                            href="../pages/Privacy-Policy.html"
+                                            class="other-dropdown-a body-mb"
+                                            >Privacy Policy</a
+                                        >
+                                    </li>
+                                    <li class="other-dropdown-li">
+                                        <a
+                                            href="../pages/Terms-of-Services.html"
+                                            class="other-dropdown-a body-mb"
+                                            >Terms of Service</a
+                                        >
+                                    </li>
+                                    <li class="other-dropdown-li">
+                                        <a
+                                            href="../pages/Coming-Soon.html"
+                                            class="other-dropdown-a body-mb"
+                                            >Coming Soon</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-li">
+                        <a class="nav-a heading-h4 community">Community</a>
+                        <ul class="dropdown-otr drop-5">
+                            <li class="dropdown-li">
+                                <a
+                                    href="../pages/Blog.html"
+                                    class="dropdown-a body-mb"
+                                    >Blog</a
+                                >
+                            </li>
+                            <li class="dropdown-li">
+                                <a
+                                    href="../pages/Help-Center.html"
+                                    class="dropdown-a body-mb"
+                                    >Help Center</a
+                                >
+                            </li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="action-otr">
+                <a onclick="createNFT()" class="btn-fill btn-create create-btn">Create</a>
+
+                <a href="" id="connect-wallet-sidebar" class="btn-outline1 btn-wallet">Connect Wallet</a>
+                <a href="javascript:void(0)" class="btn-outline1 btn-wallet user-disconnect"
+                    style="display: none;">Disconnect
+                    Wallet</a>
+            </div>
+            <!-- <ul class="icon-ul">
+                <li class="icon-li">
+                    <a href="https://www.facebook.com/nftiz.biz" class="icon-a">
+                        <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#a197aa" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="icon-li">
+                    <a href="https://twitter.com/nftiz_biz" class="icon-a">
+                        <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="icon-li">
+                    <a href="#" class="icon-a">
+                        <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                                fill="#999" />
+                            <path
+                                d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                                fill="#999" />
+                            <path
+                                d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="icon-li">
+                    <a href="#" class="icon-a">
+                        <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 11l-4 17M7.693 19.57A10 10 0 1126 14c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="icon-li">
+                    <a href="#" class="icon-a">
+                        <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 16l-6-4v8l6-4z" stroke="#a197aa" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M3 16c0 3.72.384 5.902.676 7.023a1.99 1.99 0 001.204 1.362C9.065 25.993 16 25.95 16 25.95s6.935.044 11.12-1.564a1.99 1.99 0 001.204-1.362C28.616 21.902 29 19.72 29 16c0-3.72-.384-5.902-.676-7.023a1.99 1.99 0 00-1.205-1.362C22.935 6.007 16 6.05 16 6.05S9.065 6.007 4.88 7.615a1.99 1.99 0 00-1.204 1.362C3.384 10.098 3 12.28 3 16z"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="icon-li">
+                    <a href="#" class="icon-a">
+                        <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57"
+                                stroke="#a197aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14" stroke="#a197aa"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </li>
+            </ul> -->
+            <div class="copy-name body-s">
+                Copyright © 2023 by
+
+                <!-- <a
+                    href="https://themeforest.net/user/vistothemes"
+                    class="name body-sb"
+                    >nftiz.</a
+                > -->
+                <a href="/" class="name body-sb" target="_blank" style="color: #fff; font-weight: bold;">NFT
+                    Talent.</a>
+                All rights reserved.
+            </div>
+            <div class="privacy-link">
+                <a href="/privacy-policy" class="link body-sb">Privacy Policy</a>
+                <span class="dot">•</span>
+                <a href="/terms" class="link body-sb">Terms of Service</a>
+                <!-- <script src="/user/js/single-artwork.js"></script> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=======================================
+            Modal End Here
+========================================-->

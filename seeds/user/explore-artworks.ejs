@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Explore Artworks | NFT Talent</title>
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+
+    <%- include('sidebar.ejs') %>
+
+        <!--=======================================
+            Explore Artworks Start Here
+    ========================================-->
+
+        <!--=======================================
+                Hero Section Start Here
+        ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <!--=======================================
+                        NavBar Start Here
+                ========================================-->
+
+                <!--=======================================
+                        NavBar End Here
+                ========================================-->
+
+                <%- include('navbar.ejs') %>
+            </div>
+        </div>
+
+        <!--=======================================
+                        Hero Inner End Here
+                ========================================-->
+        <div class="explore-artwork">
+            <div class="container-fluid">
+                <div class="explore-artwork-inr">
+                    <div class="heading-otr">
+                        <div class="head-otr">
+                            <h3 class="heading heading-h3">Explore Artworks</h3>
+                        </div>
+                        <a href="javascript:void(0)" class="containt-rigth clear-filter">Clear Filter</a>
+                    </div>
+                    <div class="teb-main">
+                        <div class="tab-otr">
+                            <div class="tab-inr">
+                                <ul class="tabs">
+                                    <li class="tab-link tab-1 active" value="" data-tab="1">
+                                        <p class="tab-p body-sb" id="displayAll">
+                                            All
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-2" value="On Sale" data-tab="2">
+                                        <p class="tab-p body-sb" id="fixedSale">
+                                            Fixed Sell
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-3" value="On Auction" data-tab="3">
+                                        <p class="tab-p body-sb" id="
+                                        onAuction">
+                                            Unlimited Auction
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-4" value="Timed Auction" data-tab="4">
+                                        <p class="tab-p body-sb" id="
+                                        onTimedAuction">
+                                            Timed Auction
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filters">
+                                <div class="slect-main all-chain">
+                                    <select id="sortWithCatagory" onchange="sortWithCategory()">
+                                        <option class="linkk" value="">
+                                            All Categories
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="slect-main all-chain">
+                                    <select id="sortWithChain" onchange="showWithChain()">
+                                        <option class="linkk" value="">
+                                            All chain
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="slect-main sort-by">
+                                    <select id="sortingList" onchange="sortData()">
+                                        <option class="linkk" value="">
+                                            Sort by
+                                        </option>
+                                        <option class="linkk" value="Recently Added">
+                                            Recently Added
+                                        </option>
+                                        <option class="linkk" value="Price High to Low">
+                                            Price High To Low
+                                        </option>
+                                        <option class="linkk" value="Price Low to High">
+                                            Price Low To High
+                                        </option>
+                                        <option class="linkk" value="Most Viewed">
+                                            Most Viewed
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="line"></span>
+                    <div class="row row-custom-main">
+                        <div id="tab-1" class="tab-content active">
+                            <div class="row row-custom-inr" id="mainContainer">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-btn-otr">
+                            <div class="col-btn-inr" id="containerDiv">
+                                <a id="loadBtn" href="javascript:void(0)"
+                                    class="btn-outline2 btn-wallet load-more-collections" start="0">Load More
+                                    Artworks</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=======================================
+            Explore Artworks End Here
+    ========================================-->
+
+        <%- include('footer.ejs') %>
+            <script src="/user/js/explore-artworks.js"></script>
+</body>
+
+</html>

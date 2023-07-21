@@ -1,0 +1,24 @@
+<svg width="570" height="353" viewBox="0 0 570 353" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="285.316" cy="68.3156" r="207.316" transform="rotate(-150 285.316 68.3156)" stroke="url(#paint0_linear)" stroke-width="2"/>
+<circle cx="285.315" cy="68.3153" r="165.652" transform="rotate(-150 285.315 68.3153)" stroke="url(#paint1_linear)" stroke-width="2"/>
+<circle cx="285.316" cy="68.3158" r="123.989" transform="rotate(-150 285.316 68.3158)" stroke="url(#paint2_linear)" stroke-width="2"/>
+<circle cx="285.315" cy="68.3154" r="82.3262" transform="rotate(-150 285.315 68.3154)" stroke="url(#paint3_linear)" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear" x1="285.316" y1="-140" x2="285.316" y2="276.631" gradientUnits="userSpaceOnUse">
+<stop stop-color="#366CE3"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="285.315" y1="-98.3372" x2="285.315" y2="234.968" gradientUnits="userSpaceOnUse">
+<stop stop-color="#366CE3"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="285.316" y1="-56.6736" x2="285.316" y2="193.305" gradientUnits="userSpaceOnUse">
+<stop stop-color="#366CE3"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="285.315" y1="-15.0108" x2="285.315" y2="151.642" gradientUnits="userSpaceOnUse">
+<stop stop-color="#366CE3"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

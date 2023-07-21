@@ -1,0 +1,570 @@
+<!--=======================================
+            NavBar Start Here
+    ========================================-->
+
+<div class="nav-otr">
+    <div class="container-fluid">
+        <div class="nav-inr">
+            <div class="burger-menu">
+                <div class="burger-icon-otr">
+                    <svg class="burger-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 12h16.5M4 6h9M11 18h9" stroke="#999" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <a href="/" class="logo-otr img-tilt">
+                    <img class="logo-img" src="/assets/img/logo.svg" alt="brand-logo" />
+                    <img src="/assets/img/mobilelogo.svg" class="mobile-logo" alt="logo">
+                </a>
+            </div>
+            <div class="input-main" id="searchBarDiv">
+                <input class="input" type="text" placeholder="Search Artworks" id="searchBar" />
+
+                <div onclick="searchData()">
+                    <svg class="search-icon c-pointer" width="18" height="18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 15A7 7 0 108 1a7 7 0 000 14zM12.95 12.95L17 17" stroke="#999" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="text-link"><a href="/explore-collections?admin=true">Admin's Collections</a></div>
+            <div class="notification-otr"><a href="javascript:void(0)" id="notification">
+                    <div class="noti-alert" style="display: none;"></div><img src="/assets/img/bell-icn.svg" alt="bell">
+                </a></div>
+            <div class="search-circle" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <svg class="search-icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 15A7 7 0 108 1a7 7 0 000 14zM12.95 12.95L17 17" stroke="#999" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="modal modal-input fade" id="exampleModal1" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-input">
+                    <div class="modal-content modal-content-input" id="model-searchBar">
+                        <input class="input" type="text" placeholder="Search Artworks" id="searchBarMobile" />
+                    </div>
+                </div>
+            </div>
+            <div class="action-otr">
+                <a onclick="createNFT()" class="btn-fill btn-create create-btn">Create</a>
+                <a class="btn-outline1 btn-wallet" id="nav-connect-wallet-btn" style="display: none;">Connect Wallet</a>
+                <div class="profile-otr" style="display: none;">
+                    <a class="profile-inr click-open3">
+                        <img class="creator profile-pic" src="/assets/img/male-avatar-maker.jpg" alt="creator"
+                            onerror="this.onerror=null;this.src='/assets/img/male-avatar-maker.jpg';">
+                        <div class="check-otr user-verified" style="display: none;">
+                            <svg class="check-icon" width="10" height="10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.438 2.813L4.061 7.188 1.876 5" stroke="#e42575" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <p class="price body-sb user-bal">0</p>
+                    </a>
+                    <div class="icon-hover-2 click-event3">
+                        <h5 class="heading heading-h5 user-name"></h5>
+                        <div class="copy-icon-otr" id="copy-address-header">
+                            <p class="desc body-s user-addr"></p>
+                            <svg id="copyAddress" class="copy-icon" width="18" height="18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.636 12.636H15a2 2 0 002-2V3a2 2 0 00-2-2H7.364a2 2 0 00-2 2v2.364"
+                                    stroke="#CFCFCF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M10.636 5.364H3a2 2 0 00-2 2V15a2 2 0 002 2h7.636a2 2 0 002-2V7.364a2 2 0 00-2-2z"
+                                    stroke="#CFCFCF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="box-otr">
+                            <div class="img-otr">
+                                <img class="img-eht" id="nav-currency-logo" src="" alt="bnb"
+                                    style="height: 32px; width: 32px; border-radius: 16px;">
+                            </div>
+                            <div class="price-otr">
+                                <p class="desc body-s">Current Balance</p>
+                                <h5 class="heading heading-h5 user-bal">0 </h5>
+                            </div>
+                        </div>
+                        <ul class="link-profile-otr">
+                            <li class="link-profile-inr">
+                                <span class="circle-hover"></span>
+                                <a href="#" class="profile body-sb user-profile" id="my-profile">My Profile</a>
+                            </li>
+                            <li class="link-profile-inr">
+                                <span class="circle-hover"></span>
+                                <a href="/favorite-nft" class="profile body-sb c-pointer" id="favorite-nft">My
+                                    Favorites</a>
+                            </li>
+                            <li class="link-profile-inr">
+                                <span class="circle-hover"></span>
+                                <a href="javascript:void(0)" class="profile body-sb c-pointer my-earnings">Manage
+                                    Funds</a>
+                            </li>
+                            <li class="link-profile-inr">
+                                <span class="circle-hover"></span>
+                                <a class="profile body-sb c-pointer" id="ticket-support">Ticketing Support System</a>
+                            </li>
+                            <li class="link-profile-inr">
+                                <span class="circle-hover"></span>
+                                <a class="profile body-sb c-pointer" id="refer-friend">Refer a Friend</a>
+                            </li>
+                            <li class="link-profile-inr">
+                                <span class="circle-hover"></span>
+                                <a href="javascript:void(0)" class="profile body-sb user-disconnect">Disconnect
+                                    Wallet</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navbar-under"></div>
+
+
+
+<!--=======================================
+    NavBar End Here
+========================================-->
+
+<!--=======================================
+   Select wallet modal start here
+========================================-->
+<div id="select-wallet-modal" class="modal">
+    <div class="_main">
+        <a href="" class="close-icn">
+            <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+        </a>
+
+        <div class="_container">
+            <div class="_title">
+                <h3>Select Wallet</h3>
+            </div>
+            <hr>
+            <div class="_content">
+                <div class="wallets-row row" id="wallet-connect-options">
+                    <div class="col-6 d-flex justify-content-center">
+                        <a href="javascript:void(0)" class="box-inr box-1" id="btn-metamask">
+                            <div class="icon-otr">
+                                <img class="icon" src="/assets/img/MetaMask_logo.png" alt="icon" />
+                            </div>
+                            <h5 class="head heading-h5">
+                                MetaMask
+                            </h5>
+                        </a>
+                    </div>
+                    <!-- <div class="col-6 d-flex justify-content-center">
+                        <a href="javascript:void(0)" class="box-inr box-1" id="btn-trustwallet">
+                            <div class="icon-otr">
+                                <img class="icon" src="/assets/img/trust-wallet.png" alt="icon" />
+                            </div>
+                            <h5 class="head heading-h5">
+                                Trust Wallet
+                            </h5>
+                        </a>
+                    </div> -->
+                </div>
+                <div class="row" style="display: none;">
+                    <div class="col-12 justify-content-center text-center">
+                        <div class="spinner-border mb-3" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <br />
+                        <p>Communicating with wallet.<br> Sign message with your wallet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=======================================
+Select wallet modal ends here
+========================================-->
+
+<!--=======================================
+    Raise ticket modal start
+========================================-->
+
+<div id="raise-ticket-modal" class="raise-ticket-modal modal">
+    <div class="_main">
+        <a href="" class="close-icn">
+            <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+        </a>
+        <div class="_container">
+            <div class="_title">
+                <h3>Raise a Ticket</h3>
+            </div>
+            <hr />
+            <div class="_content">
+                <div class="raise-ticket-otr row justify-content-center">
+                    <label class="col-6"><span>Title</span><span>:</span></label>
+                    <label class="col-5 cntr" value=""><input type="text" id="ticket-title"></label>
+                </div>
+
+                <div class="row justify-content-center">
+                    <label for="" class="col-6"><span>Description</span><span>:</span></label>
+                    <div class="col-5 cntr ">
+                        <textarea name="" id="ticket-desc" class="input ticket-desc"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <hr />
+            <div class="_footer">
+                <button id="raise-btn" class="place-bid-final">Raise</button>
+                <button id="raise-ticket-close" class="place-bid-final close">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--=======================================
+    Raise ticket modal end
+========================================-->
+
+
+<!--=======================================
+    Refer Friend modal start
+========================================-->
+
+<div id="refer-friend-modal" class="refer-friend-modal modal">
+    <div class="_main">
+        <a href="" class="close-icn">
+            <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+        </a>
+        <div class="_container">
+            <div class="_title">
+                <h3>Refer a Friend</h3>
+            </div>
+            <hr />
+            <div class="_content">
+
+
+                <div class="refer-friend-otr row justify-content-center">
+                    <div class="col-6">
+                        <div class="refer-img">
+                            <img src="/assets/img/refer-img.png" alt="refer">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center refer-code-otr">
+                    <label for="" class="col-6 input" id="referral-code">a0421970-23c9-48c3</label>
+                </div>
+
+            </div>
+            <hr />
+            <div class="_footer">
+                <button id="copy-refer-btn" class="place-bid-final">Copy</button>
+                <button id="refer-close" class="place-bid-final close">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--=======================================
+    Refer Friend modal end
+========================================-->
+
+<!--=======================================
+  Notification dorp down
+========================================-->
+<div id="notification-list-otr" class="icon-hover-2 notification-list-otr">
+    <div class="noti-header">
+        <h5 class="heading heading-h5">Notifications</h5>
+        <!-- <a href="" class="all-read">Mark as all read</a> -->
+    </div>
+
+    <div class="noti-list" id="notification-list">
+        <div class="text-white">
+            <p class="noti-text-read">No New Notification</p>
+        </div>
+    </div>
+</div>
+
+<!--=======================================
+  Notification dorp down
+========================================-->
+<!--=======================================
+   claim earnings modal start here
+========================================-->
+<div id="claim-earnings-modal" class="claim-earnings-modal modal">
+    <div class="_main">
+        <a href="" class="close-icn">
+            <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+        </a>
+        <div class="_container">
+            <div class="_title">
+                <h3>Claim Earnings</h3>
+            </div>
+            <hr />
+            <div class="_content">
+                <!-- <div class="wallet-icon row">
+                    <div class="col-12">
+                        <div class="bnb-logo">
+                            <img src="../assets/img/bnb-new.svg" alt="bnb-logo" />
+                        </div>
+                    </div>
+                </div> -->
+                <div class="chain-selection row justify-content-center">
+                    <label class="col-6"><span>Chain</span><span>:</span></label>
+                    <label class="col-5 cntr select-dropdown " id="select-chain" value="">
+                        <button href="!#" role="button" value="" class="select-dropdown__button"><span>Select
+                                Blockchain</span> <img class="zmdi-chevron-down" src="/assets/img/create-dropdown.svg"
+                                alt="arrow">
+                        </button>
+                        <ul class="select-dropdown__list" id="chainList"></ul>
+                        <!-- <ul class="select-dropdown__list">
+                            <li value="97" class="select-dropdown__list-item">
+                                BSC
+                            </li>
+                            <li value="80001" class="select-dropdown__list-item">
+                                MATIC
+                            </li>
+                            <li value="43113" class="select-dropdown__list-item">
+                                AVAX
+                            </li>
+                            <li value="5" class="select-dropdown__list-item">
+                                Goerli
+                            </li>
+                        </ul> -->
+
+
+                    </label>
+                </div>
+                <div class="total-earnings row justify-content-center">
+                    <label class="col-6"><span>Total
+                            Earnings</span><span>:</span></label>
+                    <label class="col-5 cntr" id="earning" value="">0</label>
+                </div>
+
+                <div class="amount row justify-content-center">
+                    <label for="" class="col-6"><span>Amount</span><span>:</span></label>
+                    <div class="col-5 cntr amount-input">
+                        <input type="number" value="" id="amount" />
+                        <label for="" class="currency-abr" id="currency-symbol"></label>
+                    </div>
+                </div>
+                <div class="validation-block row justify-content-center">
+                    <label for="" class="col-6"></label>
+                    <div class="col-5 cntr" id="error"></div>
+                </div>
+            </div>
+            <hr />
+            <div class="_footer">
+                <button id="claim-amt" class="place-bid-final">Claim</button>
+                <button id="claim-close" class="place-bid-final close">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=======================================
+claim earnings modal ends here
+========================================-->
+
+<!--=======================================
+   OTP verification modal start here
+========================================-->
+<div id="otp-modal" class="otp-modal modal">
+    <div class="_main">
+        <a href="" class="close-icn">
+            <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+        </a>
+        <div class="_container">
+            <div class="_title">
+                <h3>OTP Verification</h3>
+                <p>Place enter OTP received in the Email id</p>
+            </div>
+
+            <div class="_content">
+                <div class="row d-flex justify-content-center">
+                    <div class="otpbox-container col-6">
+                        <input type="number" name="digits" maxlength="1" id="char1">
+                        <input type="number" name="digits" maxlength="1" id="char2">
+                        <input type="number" name="digits" maxlength="1" id="char3">
+                        <input type="number" name="digits" maxlength="1" id="char4">
+                        <p class="error-text half-width">Please enter valid OTP.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="_footer">
+                <a id="verify-otp"><button class="place-bid-final">Verify OTP</button></a>
+                <p>Did not received the code? <a href="javascript:void(0)" id="resendMail"><span>Resend in <span
+                                id="mailTimer">
+                            </span></span></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=======================================
+OTP Verification modal ends here
+========================================-->
+
+<!--=======================================
+   Enter details modal start here
+========================================-->
+<div id="enter-details-modal" class="modal">
+    <div class="_main">
+        <a href="" class="close-icn">
+            <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+        </a>
+
+        <div class="_container">
+            <div class="_title">
+                <h3>Enter Details</h3>
+            </div>
+
+            <div class="_content">
+                <div class="row enter-details-row">
+                    <div class="col-12 d-flex justify-content-center align-items-center  ">
+                        <div class="referral-id-otr">
+                            <input id="enter-details-verify-referral-code" class="referral-id" type="text" value=""
+                                placeholder="Enter Referral Id">
+                            <a id="verify-referral-code" class="verify-btn">Verify</a>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <input id="enter-details-email-id" type="text" value="" placeholder="Enter Email Id">
+                    </div>
+                </div>
+
+            </div>
+            <div class="_footer">
+                <button type="button" id="register-new-user" class="place-bid-final">
+                    Register
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=======================================
+Enter details modal ends here
+========================================-->
+<!--=======================================
+   email verification modal start here
+========================================-->
+<div id="email-verify-modal" class="email-verify-modal modal">
+    <div class="_main">
+        <a href="" class="close-icn">
+            <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+        </a>
+        <div class="_container">
+            <div class="_title">
+                <h3>Verify your email</h3>
+            </div>
+
+            <div class="_content">
+                <div class="row d-flex justify-content-center text-center">
+                    <p>Please click on the link that has been sent to your email to verify your account.</p>
+                </div>
+            </div>
+
+            <div class="_footer">
+            </div>
+        </div>
+    </div>
+</div>
+<!--=======================================
+email Verification modal ends here
+========================================-->
+
+<!--=======================================
+   create collction modal start here
+========================================-->
+<div id="create-collection-modal" class="create-collection-modal modal">
+    <div class="_main">
+        <a href="" class="close-icn">
+            <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+        </a>
+        <div class="_container">
+            <div class="_title">
+                <h3>Create Collection</h3>
+            </div>
+
+            <div class="_content">
+                <div class="create-collection-img">
+                    <div id="uploadAreaColl" class="upload-area ">
+                        <div class="upload-area__header">
+                            <p class="upload-area__title"></p>
+                            <p class="upload-area__paragraph">
+                                <strong class="upload-area__tooltip">
+                                    <span class="upload-area__tooltip-data"></span>
+                                </strong>
+                            </p>
+                        </div>
+                        <div id="dropZoonColl" class="upload-area__drop-zoon drop-zoon ">
+                            <span class="drop-zoon__icon">
+                                <img src="/assets/img/create-upload.svg" alt="upload">
+                            </span>
+                            <p class="desc body-sb">
+                                JPG, WEBP, JPEG, PNG & GIF. Max 5 MB.
+                            </p>
+                            <p class="drop-zoon__paragraph btn-outline1">
+                                Browse
+                            </p>
+                            <span id="loadingTextColl" class="drop-zoon__loading-text ">Please Wait</span>
+                            <div class="img-main">
+                                <img src="../assets/img/user-Image15.jpg" alt="Preview Image" id="previewImageColl"
+                                    class="drop-zoon__preview-image " draggable="false" />
+                            </div>
+                            <input type="file" id="fileInputColl" class="drop-zoon__file-input" accept="image/*" />
+                            <div id="imageUpload-error" class="desc body-sb"></div>
+                        </div>
+                        <div id="fileDetailsColl" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">
+                                Uploaded File
+                            </h3>
+                            <div id="uploadedFileColl" class="uploaded-file">
+                                <div class="uploaded-file__icon-container">
+                                    <i class="bx bxs-file-blank uploaded-file__icon"></i>
+                                    <span class="uploaded-file__icon-text"></span>
+                                </div>
+                                <div id="uploadedFileInfoColl" class="uploaded-file__info">
+                                    <span class="uploaded-file__name">Project 1</span>
+                                    <span class="uploaded-file__counter">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collection-details">
+                    <div class="input-otr">
+                        <label for="">Name:</label>
+                        <input class="input" type="text" name="name" id="txt-colleciton-name">
+                        <div id="nftName-error"></div>
+                    </div>
+                    <div class="input-otr">
+                        <label for="">Description:</label>
+                        <textarea name="description" id="txt-collection-description" class="input"></textarea>
+                        <div id="geohash-error"></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="_footer">
+                <button type="button" id="create-collection" class="place-bid-final">
+                    Request
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=======================================
+create collction modal ends here
+========================================-->

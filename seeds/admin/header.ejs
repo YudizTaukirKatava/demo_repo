@@ -1,0 +1,241 @@
+<!-- Toastr -->
+<!-- <link rel="stylesheet" href="/admin/assets/vendor/toastr/css/toastr.min.css" /> -->
+<script>
+    const ___ENV___ = '<%= NODE_ENV %>';
+    console.log(___ENV___);
+</script>
+
+<link rel="stylesheet" href="/assets/libs/notyf/css/notyf.min.css" />
+<link rel="stylesheet" href="/admin/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" />
+
+
+<!--**********************************
+            Nav header start
+***********************************-->
+<div class="nav-header">
+    <a href="/a/dashboard" class="brand-logo">
+        <img class="logo-abbr" src="/assets/img/loader-logo.png" alt="" />
+        <img class="logo-compact" src="/assets/img/logo.svg" alt="" />
+        <img class="brand-title" src="/assets/img/logo.svg" alt="" />
+    </a>
+
+    <div class="nav-control">
+        <div class="hamburger">
+            <span class="line"></span><span class="line"></span><span class="line"></span>
+        </div>
+    </div>
+</div>
+<!--**********************************
+            Nav header end
+***********************************-->
+
+<!--**********************************
+            Header start
+***********************************-->
+<div class="header">
+    <div class="header-content">
+        <nav class="navbar navbar-expand">
+            <div class="collapse navbar-collapse justify-content-between">
+                <div class="header-left">
+                    <!-- <button class="btn btn-primary" onclick="connectMetamaskAdmin()" id="btn-admin-connect">
+                        Connect
+                    </button>
+                    <button class="btn btn-success" onclick="disconnectAdmin()" style="display: none"
+                        id="btn-admin-disconnect">
+                        Disconnect
+                    </button> -->
+                    <div class="dashboard_bar"></div>
+                </div>
+                <div class="...."></div>
+                <ul class="navbar-nav header-right">
+                    <li class="nav-item dropdown header-profile">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                            <div class="header-info">
+                                <span class="text-black">Hello,
+                                    <strong id="profileusername"> </strong></span>
+                                <p class="fs-12 mb-0">Super Admin</p>
+                            </div>
+                            <img id="admin-profile-picture" width="20" alt="" src="/assets/img/male-avatar-maker.jpg"
+                                onerror="this.onerror=null;this.src='/assets/img/male-avatar-maker.jpg';" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" data-toggle="modal" data-target="#myearnings" class="dropdown-item ai-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24">
+                                    <rect width="4" height="24" fill="none" />
+                                    <g transform="translate(2 2)">
+                                        <path d="M7.843,0a7.843,7.843,0,1,0,7.843,7.843A7.846,7.846,0,0,0,7.843,0Z"
+                                            transform="translate(0 0)" fill="#0436ed" />
+                                        <path
+                                            d="M3.757,4.784c-1.4-.463-2.071-.753-2.071-1.49,0-.8.871-1.09,1.42-1.09A1.515,1.515,0,0,1,4.6,3.255l1.239-.525A2.687,2.687,0,0,0,3.749.98V0H2.376V.988A2.419,2.419,0,0,0,.322,3.31c0,1.78,1.765,2.282,2.627,2.6,1.239.439,1.788.839,1.788,1.592,0,.886-.824,1.263-1.553,1.263A2.071,2.071,0,0,1,1.3,7.122L0,7.647A3.166,3.166,0,0,0,2.369,9.969V10.98H3.741v-.973A2.6,2.6,0,0,0,6.11,7.482C6.118,6.392,5.639,5.435,3.757,4.784Z"
+                                            transform="translate(4.784 2.353)" fill="#fafafa" />
+                                    </g>
+                                </svg>
+                                <span class="ml-2">Earnings </span>
+                            </a>
+                            <a href="/a/profile" class="dropdown-item ai-icon">
+                                <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18"
+                                    height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <span class="ml-2">Profile </span>
+                            </a>
+                            <a href="/a/changePassword" class="dropdown-item ai-icon c-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                    enable-background="new 0 0 19 19" viewBox="0 0 19 19">
+                                    <path fill="#712ddf"
+                                        d="M8.44 7.25C8.348 7.342 8.277 7.447 8.215 7.557L8.174 7.516 8.149 7.69C8.049 7.925 8.014 8.183 8.042 8.442l-.399 2.796 2.797-.399c.259.028.517-.007.752-.107l.174-.024-.041-.041c.109-.062.215-.133.307-.225l5.053-5.053-3.191-3.191L8.44 7.25zM18.183 1.568l-.87-.87c-.641-.641-1.637-.684-2.225-.097l-.797.797 3.191 3.191.797-.798C18.867 3.205 18.824 2.209 18.183 1.568z"
+                                        class="color231F20 svgShape" />
+                                    <path fill="#712ddf"
+                                        d="M15,9.696V17H2V2h8.953l1.523-1.42c0.162-0.161,0.353-0.221,0.555-0.293   c0.043-0.119,0.104-0.18,0.176-0.287H0v19h17V7.928L15,9.696z"
+                                        class="color231F20 svgShape" />
+                                </svg>
+
+                                <span class="ml-2">Change Password</span>
+                            </a>
+                            <a class="dropdown-item ai-icon c-pointer" id="logoutAdmin">
+                                <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18"
+                                    height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                                <span class="ml-2">Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- MyEarning Modal -->
+<div class="modal fade show" id="myearnings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div> -->
+            <a href="#" class="close-modal" data-dismiss="modal" aria-label="Close">
+                <span class="iconify text-brick-red rounded-circle" data-icon="carbon:close-filled" data-inline="false"
+                    style="background-color: #fff" data-width="20" data-height="20"></span>
+            </a>
+            <div class="modal-body">
+                <div class="content-sec">
+                    <div class="row">
+                        <div class="col">
+                            <img src="../assets/img/salary.svg" class="img-fluid mx-auto mb-4 mt-4 d-table" />
+                            <h6 class="font-family-infra-semibold text-capitalize text-center mb-0">
+                                My Earnings
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+
+                        <div class="slect-main all-chain">
+                            <div class="select"><select id="selectWithChains" class="select-hidden">
+
+                                    <option value="56">Binance Smart Chain
+                                    </option>
+                                    <option value="1">Ethereum</option>
+                                    <option value="43114">Avalanche c chain</option>
+                                    <option value="137">Polygon</option>
+                                </select>
+                                <!-- <div class="select-styled">Avalanche fuji - Testnet</div> -->
+                                <!-- <ul class="select-options" style="display: none;">
+                                    <li rel="">
+                                        All chain
+                                    </li>
+                                    <li rel="97">Binance Smart Chain - Testnet</li>
+                                    <li rel="5">Goerli - Testnet</li>
+                                    <li rel="43113">Avalanche fuji - Testnet</li>
+                                    <li rel="80001">Mumbai - Testnet</li>
+                                </ul> -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row align-items-center bg-light-purple pt-3 pb-3 ">
+                        <div class="col-md-4">
+                            <h5 class="font-family-bs-regular text-capitalize mb-0 text-center text-md-left">
+                                Earnings
+                            </h5>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="font-family-bs-semibold earning-sum mb-0 text-center text-md-right">
+                                <span id="txtRedeemablePoints"></span>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col bas-form" style="padding: 0">
+                            <input class="form-control" type="number" name="redeemPoints" id="redeemPoints"
+                                placeholder="Amount To Redeem (BNB)" />
+                            <label for="AmountError" id="lblAmountError" class="text-danger d-none"></label>
+                            <label for="connectError" id="connectError" class="text-danger d-none"></label>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col text-center">
+                            <button class="btn btn-primary btn-peach with-icon mx-auto" id="btnRedeem">
+                                <span>Redeem</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+
+
+<!--**********************************
+            Header end 
+***********************************-->
+
+<script src="/admin/assets/vendor/global/global.min.js"></script>
+
+<!-- Toastr -->
+<!-- <script src="/admin/assets/vendor/toastr/js/toastr.min.js"></script> -->
+<!-- <script src="/assets/libs/jquery/dist/jquery.min.js"></script> -->
+
+
+<script src="/assets/libs/notyf/js/notyf.min.js"></script>
+
+<script src="/assets/js/web3.min.js"></script>
+
+<!-- platform config  -->
+<script src="/assets/js/config.platform.js"></script>
+
+<!-- wallet connect cdn -->
+<script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+
+<!-- web3  -->
+<script src="/assets/js/service.web3.js"></script>
+<script src="/assets/js/chains.web3.js"></script>
+<script src="/assets/js/contracts.web3.js"></script>
+
+<!-- helper Functions  -->
+<script src="/assets/js/helper.js"></script>
+
+<!-- Validator Functions  -->
+<script src="/assets/js/validator.js"></script>
+
+<!-- global variables  -->
+<script src="/assets/js/global.js"></script>
+
+<!-- common Functions  -->
+<script src="/assets/js/common.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+
+
+<script src="/admin/js/header.js"></script>

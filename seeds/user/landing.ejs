@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- HTML Meta Tags -->
+    <title>NFT Talent</title>
+    <meta name="description" content="NFT Talent170">
+
+
+    <meta itemprop="name" content="NFT Talent">
+    <meta itemprop="description" content="NFT Talent">
+    <meta itemprop="image" content="${window.location.origin}/assets/img/NFTiz%20Logo.jpg">
+    <meta itemprop="image:width" content="300">
+    <meta itemprop="image:height" content="300">
+    <meta itemprop="image:alt" content="NFT-MarketPlace">
+
+
+    <meta property="og:url" content="${window.location.origin}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NFT Talent">
+    <meta property="og:description" content="NFT Talent">
+    <meta property="og:image" content="${window.location.origin}/assets/img/NFTiz%20Logo.jpg">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="NFT-MarketPlace">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NFT Talent">
+    <meta name="twitter:description" content="NFT Talent">
+    <meta name="twitter:image" content="${window.location.origin}/assets/img/NFTiz%20Logo.jpg">
+    <meta property="twitter:image:width" content="300">
+    <meta property="twitter:image:height" content="300">
+    <meta property="twitter:image:alt" content="NFT-MarketPlace">
+    <!-- Meta Tags Generated via http://heymeta.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+    <a class="chat-btn" href="">
+        <img src="/assets/img/chat.png" alt="png">
+    </a>
+
+
+    <!--=======================================
+                Modal Start Here
+        ========================================-->
+
+    <%- include('sidebar.ejs') %>
+
+        <!--=======================================
+                    Modal End Here
+        ========================================-->
+
+        <!--=======================================
+                Hero Section Start Here
+        ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <!--=======================================
+                        NavBar Start Here
+                ========================================-->
+
+                <!--=======================================
+                        NavBar End Here
+                ========================================-->
+
+                <%- include('navbar.ejs') %>
+
+                    <!--=======================================
+                        Hero Inner Start Here
+                ========================================-->
+                    <div class="banner-slider" id="secondary-slider">
+                        <div class="hero-mainn primary-slide">
+                            <div class="container-fluid">
+                                <div class="hero-inr">
+                                    <div class="row row-custom">
+                                        <div class="col-lg-6 col-content-otr">
+                                            <div class="col-content-inr">
+                                                <div class="head-otr">
+                                                    <h1 id="nft-title" class="heading-h1 heading titleGreathorned">
+                                                        -
+                                                    </h1>
+                                                </div>
+                                                <div class="boxes-main">
+                                                    <div class="bid-main">
+                                                        <p class="bid body-mb">
+                                                            Current Bid
+                                                        </p>
+                                                        <h3 id="hero-nft-price" class="heading-h3 bid-head">
+                                                            0
+                                                        </h3>
+                                                        <p class="dollor body-mb" id="bnbPrice">
+                                                            $ 0
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="action-otr">
+                                                    <a class="btn-fill btn-create" id="place-bid-btn">Place a
+                                                        Bid</a>
+                                                    <a id="hero-view-artwork" href="/nft"
+                                                        class="btn-outline2 btn-wallet">View Artwork</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-5 col-img-otr">
+                                            <div class="bg-gradient">
+                                                <div class="bg-gradient-inr">
+                                                    <marquee class="marq1" amount="2" direction="left">
+                                                        <ul class="marq-ul">
+                                                            <li class="marq-li primary-background-name">
+                                                                <!-- Nft Name -->
+                                                            </li>
+                                                        </ul>
+                                                    </marquee>
+                                                    <marquee class="marq2" amount="2" direction="right">
+                                                        <ul class="marq-ul">
+                                                            <li class="marq-li primary-background-name">
+                                                                <!-- Nft Name -->
+                                                            </li>
+                                                        </ul>
+                                                    </marquee>
+                                                </div>
+                                            </div>
+                                            <div class="col-img-inr">
+                                                <div class="nft-img-wrapper" id="landingAuctionImgTime">
+                                                    <a id="hero-view-nft" href="/nft/" class="img-otr img-tilt"
+                                                        data-tilt>
+                                                        <img class="artwork-img img-fluid" id="landingAuctionImg" src=""
+                                                            onerror="this.onerror=null;this.src='/assets/img/New_Project_1.jpg';"
+                                                            alt="artwork-img" />
+                                                    </a>
+                                                    <!-- <div class="timer-otr timer-gif">
+                                                        <img src="/assets/img/Timer_ICon.gif"
+                                                            style="width:30px;height:30px;" alt="Avalanche">
+                                                    </div> -->
+                                                    <!-- <div class="timer-otr copies">
+                                                        <div class="body-sb copies-text" id="txt-chainName">Blockchain
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                                <div class="create-otr">
+                                                    <div class="create-inr">
+                                                        <a id="hero-profile-id" href="" class="create-img">
+                                                            <img id="hero-profilePic" class="img-create" src=""
+                                                                onerror="this.onerror=null;this.src='/assets/img/male-avatar-maker.jpg';"
+                                                                alt="create-img" />
+                                                            <div class="check-otr" id="isVerified">
+                                                                <svg class="check-icon" width="10" height="10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M8.438 2.813L4.061 7.188 1.876 5"
+                                                                        stroke="#fff" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                        <div class="create-content">
+                                                            <p class="body-s create-p">
+                                                                Owned by
+                                                            </p>
+                                                            <a id="hero-owner-name" href=""
+                                                                class="body-sb create-pb">Unknown</a>
+                                                        </div>
+
+                                                        <div class="hover-box">
+                                                            <div class="hover-box-inr">
+                                                                <p id="hero-nftOwner-name" class="post-title body-lb">
+                                                                    -
+                                                                </p>
+                                                                <a id="hero-walletaddress-profile" href=""
+                                                                    class="address-main">
+                                                                    <p id="hero-walletaddress" class="address body-s">
+                                                                        0x
+                                                                    </p>
+                                                                    <svg id="copy-hero-address" class="copy-icon"
+                                                                        width="18" height="18" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.636 12.636H15a2 2 0 002-2V3a2 2 0 00-2-2H7.364a2 2 0 00-2 2v2.364"
+                                                                            stroke="#CFCFCF" stroke-width="2"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.636 5.364H3a2 2 0 00-2 2V15a2 2 0 002 2h7.636a2 2 0 002-2V7.364a2 2 0 00-2-2z"
+                                                                            stroke="#CFCFCF" stroke-width="2"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="heart-main" id="landingCard">
+                                                        <!-- <a class="heart-otr">
+                                                            <svg class="heart-icon" width="18" height="17" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M9 15.08S1 10.6 1 5.16a4.16 4.16 0 018-1.603h0a4.16 4.16 0 018 1.603c0 5.44-8 9.92-8 9.92z"
+                                                                    stroke="#999" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </a>
+                                                        <p id="hero-nft-likes" class="body-sb num">
+                                                            Favourite
+                                                        </p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Secondary slider -->
+                    </div>
+
+                    <!--=======================================
+                        Hero Inner End Here
+                ========================================-->
+
+
+            </div>
+        </div>
+
+        <!--=======================================
+                Hero Section Start Here
+        ========================================-->
+
+        <!--=======================================
+                Live Auction's Start Here
+        ========================================-->
+
+        <div class="live-acution-home2">
+            <div class="pattern-left"><img src="../assets/img/pattern-left.svg" alt="left"></div>
+            <div class="container-fluid">
+                <div class="live-auction-inr" id="liveAuction">
+                    <div class="heading-otr">
+                        <div class="head-otr">
+                            <span class="dot"></span>
+                            <h3 class="heading heading-h3">Live Auctions</h3>
+                        </div>
+                    </div>
+                    <span class="line"></span>
+                    <div class="row row-custom owl-carousel owl-theme" id="live-auctions">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=======================================
+            Live Auction's End Here
+    ========================================-->
+        <!--=======================================
+            Hot collection start Here
+    ========================================-->
+        <div class="live-acution-home2">
+            <div class="container-fluid">
+                <div class="live-auction-inr hot-collection-inr">
+                    <div class="heading-otr">
+                        <div class="head-otr">
+                            <span class="dot"></span>
+                            <h3 class="heading heading-h3">Hot Collection</h3>
+                        </div>
+                        <a href="/explore-collections" class="view-all" id="all-collection">
+                            <p class="View-p body-sb">View Collection</p>
+                            <svg class="arrow-icon" width="18" height="16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#ffffff" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <span class="line"></span>
+                    <div class="row row-custom" id="hot-collections">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--=======================================
+            Hot collection end Here
+    ========================================-->
+
+        <!--=======================================
+            Top Sellers Start Here
+    ========================================-->
+
+        <div class="creator-main-home2">
+            <div class="pattern-right"><img src="../assets/img/pattern-right.svg" alt="right"></div>
+            <div class="container-fluid">
+                <div class="creator-main-inr">
+                    <div class="heading-otr">
+                        <div class="head-otr">
+                            <h3 class="heading heading-h3">
+                                Top Sellers
+                            </h3>
+                        </div>
+                        <a href="/explore-creators" class="view-all">
+                            <p class="View-p body-sb">View All Creators</p>
+                            <svg class="arrow-icon" width="18" height="16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#E42575" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <span class="line"></span>
+                    <div class="row row-custom" id="creator-of-week">
+
+                        <div class="responsive">
+                            <a href="/explore-creators" class="view-all">
+                                <p class="View-p body-sb">View All Creators</p>
+                                <svg class="arrow-icon" width="18" height="16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#000" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--=======================================
+            Top Sellers End Here
+    ========================================-->
+
+        <!--=======================================
+            Explore Artworks Start Here
+    ========================================-->
+        <div class="explore-artwork-home2">
+            <div class="pattern-left"><img src="../assets/img/pattern-left.svg" alt="left"></div>
+            <div class="container-fluid">
+                <div class="explore-artwork-inr">
+                    <div class="heading-otr">
+                        <div class="head-otr">
+                            <h3 class="heading heading-h3">Explore Artworks</h3>
+                        </div>
+                        <a href="/explore-artworks" class="view-all">
+                            <p class="View-p body-sb">View All Artworks</p>
+                            <svg class="arrow-icon" width="18" height="16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="teb-main explore-artwork-tabs">
+                        <div class="tab-otr">
+                            <div class="tab-inr">
+                                <ul class="tabs">
+                                    <li class="tab-link tab-1 active" data-tab="1" value="">
+                                        <p class="tab-p body-sb" id="displayAll">
+                                            All
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-2" data-tab="2" value="On Sale">
+                                        <p class="tab-p body-sb" id="fixedSale">
+                                            Fixed Sell
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-3" data-tab="3" value="On Auction">
+                                        <p class="tab-p body-sb" id="
+                                    onAuction">
+                                            Auction
+                                        </p>
+                                    </li>
+                                    <li class="tab-link tab-4" data-tab="4">
+                                        <div class="slect-main all-chain">
+                                            <select id="sortWithChain" onchange="showWithChain()">
+                                                <option class="linkk" value="">
+                                                    All chain
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span class="line"></span>
+                            <div class="row row-custom-main">
+                                <div id="tab-1" class="tab-content active">
+                                    <div id="landingPage-explore-artwork" class="row row-custom-inr">
+                                    </div>
+                                </div>
+
+                                <div class="responsive">
+                                    <a href="/explore-artworks" class="view-all">
+                                        <p class="View-p body-sb">View All Artworks</p>
+                                        <svg class="arrow-icon" width="18" height="16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#000"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=======================================
+        Explore Artworks End Here
+========================================-->
+
+        <!--=======================================
+            Work Start Here
+========================================-->
+
+        <div class=" work-main-home2">
+            <div class="pattern-right"><img src="../assets/img/pattern-right.svg" alt="right"></div>
+            <div class="container-fluid">
+                <div class="wrapper">
+                    <h3 class="head heading-h3">How NFT Talent Works</h3>
+                    <div class="teb-main">
+                        <ul class="tabs work-tabs">
+                            <li class="tab-link-work tab-work1 active" data-tab="work1">
+                                <p class="tab-p body-sb">For Creators</p>
+                            </li>
+                            <li class="tab-link-work tab-work2" data-tab="work2">
+                                <p class="tab-p body-sb">For Collectors</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row-work">
+                    <div id="tab-work1" class="tab-content active fade">
+                        <div class="row row-work-inr">
+                            <div class="col-lg-4 col-md-6 col-work-otr">
+                                <div class="col-work-inr box1">
+                                    <div class="icon-otr">
+                                        <div class="icon-inr">
+                                            <span class="bg-icon"></span>
+                                            <svg class="icon" width="32" height="32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity=".2"
+                                                    d="M5 24a2 2 0 002 2h20a1 1 0 001-1V11a1 1 0 00-1-1H7a2 2 0 01-2-2v16z"
+                                                    fill="#fff"></path>
+                                                <path
+                                                    d="M5 8v16a2 2 0 002 2h20a1 1 0 001-1V11a1 1 0 00-1-1H7a2 2 0 01-2-2zm0 0a2 2 0 012-2h17"
+                                                    stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M22.5 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#fff">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="heading heading-h4">
+                                            Set Up Your Wallet
+                                        </h4>
+                                    </div>
+                                    <p class="desc body-m">
+                                        Set up your wallet and then you can
+                                        create, sell &amp; collect NFTs at NFT Talent.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-work-otr">
+                                <div class="col-work-inr box2">
+                                    <div class="icon-otr">
+                                        <div class="icon-inr">
+                                            <span class="bg-icon"></span>
+                                            <svg class="icon" width="32" height="32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity=".2" d="M16 16H5.5V6.5a1 1 0 011-1H16V16z" fill="#fff">
+                                                </path>
+                                                <path
+                                                    d="M25.5 5.5h-19a1 1 0 00-1 1v19a1 1 0 001 1h19a1 1 0 001-1v-19a1 1 0 00-1-1zM16 5.5v21M26.5 16h-21"
+                                                    stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="heading heading-h4">
+                                            Add Your NFTs
+                                        </h4>
+                                    </div>
+                                    <p class="desc body-m">
+                                        After setting up your wallet, you can
+                                        add your NFTs on NFT Talent.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-work-otr">
+                                <div class="col-work-inr box3">
+                                    <div class="icon-otr">
+                                        <div class="icon-inr">
+                                            <span class="bg-icon"></span>
+                                            <svg class="icon" width="32" height="32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity=".2"
+                                                    d="M7.818 18h15.695a2 2 0 001.967-1.642L27 8H6l1.818 10z"
+                                                    fill="#fff"></path>
+                                                <path
+                                                    d="M23 23H8.727L5.24 3.821A1 1 0 004.256 3H2M10 28a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM23 28a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"
+                                                    stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M7.818 18h15.695a2 2 0 001.967-1.642L27 8H6" stroke="#fff"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="heading heading-h4">
+                                            Sell Your NFTs
+                                        </h4>
+                                    </div>
+                                    <p class="desc body-m">
+                                        After adding your NFTs, you can list
+                                        your NFTs for sale.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-work2" class="tab-content">
+                        <div class="row row-work-inr">
+                            <div class="col-lg-4 col-md-6 col-work-otr">
+                                <div class="col-work-inr box1">
+                                    <div class="icon-otr">
+                                        <div class="icon-inr">
+                                            <span class="bg-icon"></span>
+                                            <svg class="icon" width="32" height="32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity=".2"
+                                                    d="M5 24a2 2 0 002 2h20a1 1 0 001-1V11a1 1 0 00-1-1H7a2 2 0 01-2-2v16z"
+                                                    fill="#fff"></path>
+                                                <path
+                                                    d="M5 8v16a2 2 0 002 2h20a1 1 0 001-1V11a1 1 0 00-1-1H7a2 2 0 01-2-2zm0 0a2 2 0 012-2h17"
+                                                    stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M22.5 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#fff">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="heading heading-h4">
+                                            Set Up Your Wallet
+                                        </h4>
+                                    </div>
+                                    <p class="desc body-m">
+                                        Set up your wallet and then you can
+                                        create, sell &amp; collect NFTs at NFT Talent.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-work-otr">
+                                <div class="col-work-inr box2">
+                                    <div class="icon-otr">
+                                        <div class="icon-inr">
+                                            <span class="bg-icon"></span>
+                                            <svg class="icon" width="32" height="32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity=".2" d="M16 16H5.5V6.5a1 1 0 011-1H16V16z" fill="#fff">
+                                                </path>
+                                                <path
+                                                    d="M25.5 5.5h-19a1 1 0 00-1 1v19a1 1 0 001 1h19a1 1 0 001-1v-19a1 1 0 00-1-1zM16 5.5v21M26.5 16h-21"
+                                                    stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="heading heading-h4">
+                                            Buy or Bid on NFTs
+                                        </h4>
+                                    </div>
+                                    <p class="desc body-m">
+                                        More higher bid,
+                                        More chance to own NFTs.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-work-otr">
+                                <div class="col-work-inr box3">
+                                    <div class="icon-otr">
+                                        <div class="icon-inr">
+                                            <span class="bg-icon"></span>
+                                            <svg class="icon" width="32" height="32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity=".2"
+                                                    d="M7.818 18h15.695a2 2 0 001.967-1.642L27 8H6l1.818 10z"
+                                                    fill="#fff"></path>
+                                                <path
+                                                    d="M23 23H8.727L5.24 3.821A1 1 0 004.256 3H2M10 28a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM23 28a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"
+                                                    stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M7.818 18h15.695a2 2 0 001.967-1.642L27 8H6" stroke="#fff"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="heading heading-h4">
+                                            Collect your NFTs
+                                        </h4>
+                                    </div>
+                                    <p class="desc body-m">
+                                        After successfully own NFTs, you can see them under my profile
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=======================================
+            Work End Here
+========================================-->
+
+        <!--=======================================
+        Call to Action Start Here
+========================================-->
+
+        <div class="call-to-action-home2">
+            <div class="container-fluid">
+                <div class="call-to-action">
+                    <div class="wrapper">
+                        <h2 class="heading-h2 heading">
+                            Create, Sell &amp; Collect <br>
+                            NFTs at NFT Talent
+                        </h2>
+                        <p class="desc body-m">
+                            Our marketplace is built with all the latest technologies while maintaining the
+                            highest level of
+                            <br>
+                            security. It is designed in a way that appeals to the user and enhances the user
+                            experience.
+                            <br>
+                            We provide quick wallet integration to remove any unnecessary hassle for the
+                            users, making trade
+                            <br>
+                            fast and easy. With options like customization and smart contract management,
+                            your
+                            <br>
+                            marketplace will be fully optimized to outperform your competitors and help you
+                            outshine them
+                            <br>
+                            in the NFT industry.
+                        </p>
+                        <div class="action-otr">
+                            <a href="" class="btn-fill btn-create create-btn" id="create-nft">Create</a>
+                            <a href="" id="walletConnection" class="btn-outline1 btn-wallet">Connect
+                                Wallet</a>
+                        </div>
+                    </div>
+                    <div id="call-action-img" class="img-otr">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--=======================================
+        Call to Action End Here
+========================================-->
+
+
+        <!--=======================================
+        Logo slider start Here
+========================================-->
+
+
+        <div class="container-fluid">
+            <div class="logo-slider" id="logo-slider">
+                <div class="single-logo">
+                    <img src="../assets/img/ethereum-eth-icon.svg" alt="ethereum">
+                </div>
+                <div class="single-logo">
+                    <img src="../assets/img/polygon-matic-icon.svg" alt="polygon">
+                </div>
+                <div class="single-logo">
+                    <img src="../assets/img/avalanche-avax-icon.svg" alt="Avalanche">
+                </div>
+                <div class="single-logo">
+                    <img src="../assets/img/binance-coin-bnb-icon.svg" alt="Binance">
+                </div>
+                <div class="single-logo">
+                    <img src="../assets/img/metamask-icon.svg" alt="Metamask">
+                </div>
+                <div class="single-logo">
+                    <img src="../assets/img/trust_logotype.png" alt="Trust-Wallet">
+                </div>
+                <div class="single-logo">
+                    <img src="../assets/img/maker-mkr-logo.png" alt="Maker">
+                </div>
+                <div class="single-logo">
+                    <img src="../assets/img/aave-aave-logo.png" alt="Aave">
+                </div>
+                <div class="single-logo">
+                    <img src="../assets/img/wallet_guard.png" alt="Wallet-guard">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--=======================================
+        Logo slider End Here
+========================================-->
+
+
+
+        <!--=======================================
+        Footer & Copyright Section Start Here
+    ========================================-->
+
+        <%- include('footer.ejs') %>
+
+            <!--=======================================
+        Footer & Copyright Section End Here
+    ========================================-->
+
+            <div id="place-bid-modal" class="modal">
+                <div class="_main">
+                    <a href="" class="close-icn">
+                        <img class="close-icn" src="/assets/img/cancel.svg" alt="close">
+                    </a>
+                    <div class="_container">
+                        <div class="_title">
+                            <h3>Place Bid</h3>
+                        </div>
+                        <hr>
+                        <div class="_content">
+                            <div class="price-labels row">
+                                <label class="col-6"><span>Base Price</span><span>:</span></label>
+                                <label class="col-5 cntr" id="base-price">0.00002 BNB</label>
+                            </div>
+                            <div class="current-bid-labels row">
+                                <label class="col-6"><span>Current Highest Bid</span><span>:</span></label>
+                                <label class="col-5 cntr" id="current-highest-bid">
+                                    0.00002 BNB
+                                </label>
+                            </div>
+                            <div class="bid-amt row">
+                                <label for="" class="col-6"><span>Bid Amount</span><span>:</span></label>
+                                <div class="col-5 cntr">
+                                    <input id="bid-amount" type="number" value="">
+                                </div>
+                            </div>
+                            <div class="validation-block row">
+                                <label for="" class="col-6"></label>
+                                <div class="col-5 cntr" id="auctionError"></div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="_footer">
+                            <button id="place-bid" class="place-bid-final">
+                                Place Bid
+                            </button>
+                            <button id="close-bid" class="place-bid-final close">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+            <script src="/user/js/landing.js"></script>
+            <script>
+                console.log($(".tab-link-work")); 
+            </script>
+            <script>
+                $("#logo-slider").slick({
+                    infinite: true,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1000,
+                    dots: false,
+                    arrows: false,
+                    speed: 1200,
+                    responsive: [
+                        {
+                            breakpoint: 575,
+                            settings: {
+                                slidesToShow: 3,
+                            },
+                        },
+                        {
+                            breakpoint: 991,
+                            settings: {
+                                slidesToShow: 4,
+                            },
+                        },
+                    ],
+                })
+            </script>
+
+            <!-- <script src="/user/js/landing-temp.js"></script> -->
+</body>
+
+</html>

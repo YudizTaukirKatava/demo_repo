@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Explore Collections | NFT Talent</title>
+    <%- include('css-lib.ejs') %>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-img">
+            <img src="/assets/img/loader-logo.png" alt="Loading">
+        </div>
+    </div>
+    <%- include('sidebar.ejs') %>
+        <!-- background pattern divs start -->
+        <div class="pattern-container">
+            <div class="pattern-left"><img src="../assets/img/pattern-left.svg" alt="pattern-left"></div>
+            <div class="pattern-right"><img src="../assets/img/pattern-right.svg" alt="pattern-right"></div>
+
+        </div>
+        <!-- background pattern divs end -->
+        <!--=======================================
+                Hero Section Start Here
+    ========================================-->
+
+        <div class="main-hero">
+            <div class="hero-main-inr">
+                <!--=======================================
+                        NavBar Start Here
+        ========================================-->
+
+                <%- include('navbar.ejs') %>
+
+                    <!--=======================================
+                        NavBar End Here
+        ========================================-->
+            </div>
+        </div>
+
+        <!--=======================================
+                        Hero Inner End Here
+    ========================================-->
+
+        <!--=======================================
+            Creators of the Week Start Here
+    ========================================-->
+        <div class="live-acution-home2 explore-collections-otr">
+            <div class="container-fluid">
+                <div class="live-auction-inr hot-collection-inr">
+                    <div class="heading-otr">
+                        <div class="head-otr">
+                            <h3 class="heading heading-h3" id="explore-collection-header">Explore Collection</h3>
+                        </div>
+
+                    </div>
+                    <span class="line"></span>
+                    <div class="row row-custom explore-collections-row" id="collection_list"></div>
+                    <a id="load-btn" href="" class="btn-outline2 btn-wallet load-more-collections" tabindex="0">Load
+                        More
+                        Collections</a>
+                </div>
+            </div>
+        </div>
+
+        <!--=======================================
+        Creators of the Week End Here
+    ========================================-->
+
+        <%- include('footer.ejs') %>
+            <script src="/user/js/explore-collections.js"></script>
+            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+</body>
+
+</html>
