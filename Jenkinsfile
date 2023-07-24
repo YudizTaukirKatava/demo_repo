@@ -5,8 +5,9 @@ pipeline{
       steps{
         sh 'mkdir -p demo_dir'
         sh 'pwd'	
-	sh 'cd demo_dir'
-	sh 'pwd'      
+	dir('/var/lib/jenkins/workspace/demo/demo_dir') {
+   		sh 'pwd'
+	}     
       }  
     }
   }
